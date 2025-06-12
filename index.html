@@ -6,13 +6,19 @@
     <title>Watfy - Launch. Sell. Grow. All on WhatsApp.</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- React Libraries -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- Babel to transpile JSX in the browser -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f8fafc; /* Light blue-gray background */
         }
-        /* Custom button styling */
+        /* Custom button styling from your file */
         .btn-primary {
             @apply bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-xl shadow-lg transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-300;
         }
@@ -39,22 +45,21 @@
                 Start selling where your customers already are — in their chats. No app. No website. Just your store, running inside WhatsApp with AI doing the heavy lifting.
             </p>
             <!-- Call to Action Button (CTA) -->
-            <a href="#" class="btn-primary inline-flex items-center space-x-2">
+            <a href="https://forms.gle/WoHMz81KrghFnEg2A" target="_blank" class="btn-primary inline-flex items-center space-x-2">
                 <span>Start Free Store in 30 Seconds</span>
                 <span class="font-normal text-xl">&rarr;</span>
             </a>
             <p class="text-sm md:text-base text-gray-600 mt-4">
                 <span class="font-semibold text-green-700">&#x2705;</span> No setup fees &bull; No coding &bull; No nonsense
             </p>
-            <!-- Optional: Demo Video/GIF Placeholder -->
-            <div class="mt-12 md:mt-16 bg-gray-200 rounded-2xl overflow-hidden shadow-inner w-full max-w-3xl mx-auto aspect-video flex items-center justify-center">
-                <p class="text-gray-500 text-lg">20-second looping demo video/GIF placeholder</p>
-                <!-- In a real app, you'd embed a video here, e.g.: -->
-                <!-- <video src="your-demo-video.mp4" autoplay loop muted class="w-full h-full object-cover rounded-2xl"></video> -->
+            <!-- React Simulation Placeholder -->
+            <div id="simulation-root" class="mt-12 md:mt-16 w-full max-w-3xl mx-auto flex items-center justify-center">
+                <!-- The React simulation will be rendered here -->
             </div>
         </div>
     </section>
 
+    <!-- The rest of your landing page sections go here... -->
     <!-- NEW SECTION: “The Problem” — What Sellers Are Struggling With -->
     <section class="py-16 md:py-20 px-4 bg-gray-50 text-center">
         <div class="max-w-5xl mx-auto">
@@ -188,7 +193,7 @@
                 <div class="flex flex-col md:flex-row items-center md:items-start text-center md:text-left bg-gray-50 p-6 rounded-2xl shadow-md border border-gray-100">
                     <div class="flex-shrink-0 mb-4 md:mb-0 md:mr-6 text-orange-600 font-extrabold text-5xl">1.</div>
                     <div>
-                        <h3 class="font-bold text-2xl text-gray-900 mb-2">Send Your Products</h3>
+                        <h3 class="font-bold text-2xl text-gray-900 mb-2">Update Your Catalog</h3>
                         <p class="text-lg text-gray-700">Share photos, videos, or your Insta handle — we turn it into a store.</p>
                     </div>
                 </div>
@@ -277,14 +282,14 @@
                     <blockquote class="text-xl md:text-2xl italic text-gray-800 mb-6">
                         “I went from 0 to ₹30K/month just using my WhatsApp. Watfy made it look easy.”
                     </blockquote>
-                    <p class="font-semibold text-lg text-gray-700">- Happy Seller 1</p>
+                    <p class="font-semibold text-lg text-gray-700">- A Happy Pilot Seller</p>
                 </div>
                 <!-- Testimonial 2 -->
                 <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 flex flex-col items-center text-center">
                     <blockquote class="text-xl md:text-2xl italic text-gray-800 mb-6">
                         “I’m an Instagram artist — Watfy turned my followers into real buyers.”
                     </blockquote>
-                    <p class="font-semibold text-lg text-gray-700">- Creative Entrepreneur</p>
+                    <p class="font-semibold text-lg text-gray-700">- A Happy Pilot Entrepreneur</p>
                 </div>
             </div>
             <!-- Optional: Credibility Tags -->
@@ -308,7 +313,7 @@
                     <span class="font-bold text-green-700">👉 “You pay a token fee to enable your store on platform, and we only win when you win.”</span>
                 </p>
                 <p class="text-md text-gray-600 mt-4">
-                    A psychologically appealing and low-friction model — ideal for SMBs and creators.
+                    Ideal for SMBs and creators.
                 </p>
             </div>
         </div>
@@ -324,7 +329,7 @@
                 Launch your AI-powered WhatsApp Store in under a minute — no developer, no app store, no BS.
             </p>
             <!-- CTA Button -->
-            <a href="#" class="btn-secondary inline-flex items-center space-x-2">
+            <a href="https://forms.gle/WoHMz81KrghFnEg2A" target="_blank" class="btn-secondary inline-flex items-center space-x-2">
                 <span>Launch Free WhatsApp Store Now</span>
                 <span class="font-normal text-xl">&rarr;</span>
             </a>
@@ -396,5 +401,175 @@
         </div>
     </footer>
 
+    <!-- This is where the React magic happens! -->
+    <script type="text/babel">
+        const { useState, useEffect, useMemo } = React;
+
+        // --- Helper Components ---
+        const PhoneMockup = ({ children }) => (
+          <div className="relative mx-auto border-gray-800 bg-gray-800 border-[8px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl">
+            <div className="w-[140px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
+            <div className="h-[46px] w-[3px] bg-gray-800 absolute -left-[11px] top-[72px] rounded-l-lg"></div>
+            <div className="h-[46px] w-[3px] bg-gray-800 absolute -left-[11px] top-[124px] rounded-l-lg"></div>
+            <div className="h-[64px] w-[3px] bg-gray-800 absolute -right-[11px] top-[142px] rounded-r-lg"></div>
+            <div className="rounded-[2rem] overflow-hidden w-full h-full bg-white">
+              {children}
+            </div>
+          </div>
+        );
+
+        const ChatBubble = ({ message, isUser }) => (
+          <div className={`w-full flex ${isUser ? 'justify-end' : 'justify-start'}`}>
+            <div className={`p-2 rounded-lg max-w-[85%] my-1 shadow-sm whitespace-pre-wrap ${isUser ? 'bg-green-200' : 'bg-white'}`}>
+              <p className="text-sm">{message}</p>
+            </div>
+          </div>
+        );
+
+        const TypingIndicator = () => (
+          <div className="w-full flex justify-start">
+            <div className="p-2 rounded-lg bg-white my-1">
+              <div className="flex items-center space-x-1">
+                <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+                <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+                <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+              </div>
+            </div>
+          </div>
+        );
+
+        // --- Screen Components ---
+        const WhatsAppScreen = ({ messages, showTyping }) => (
+          <div className="flex flex-col h-full bg-cover" style={{ backgroundImage: "url('https://i.pinimg.com/736x/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg')" }}>
+            <header className="bg-green-700 text-white p-3 flex items-center shadow-md z-10">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+              <img src="https://placehold.co/40x40/FFFFFF/333333?text=W" alt="Watfy AI" className="rounded-full w-8 h-8 mr-3 border-2 border-white" />
+              <div>
+                <h2 className="font-semibold text-base">My Awesome Store</h2>
+                <p className="text-xs">online</p>
+              </div>
+            </header>
+            <div className="flex-grow p-3 overflow-y-auto">
+              {messages.map((msg, index) => <ChatBubble key={index} {...msg} />)}
+              {showTyping && <TypingIndicator />}
+            </div>
+            <footer className="bg-gray-100 p-2 flex items-center">
+              <div className="flex-grow bg-white rounded-full mx-2 p-2 text-sm text-gray-400">Message...</div>
+            </footer>
+          </div>
+        );
+
+        const PaymentScreen = () => (
+            <div className="bg-gray-50 h-full flex flex-col items-center justify-center p-4 text-center">
+                <img src="https://www.svgrepo.com/show/508638/secure-payment.svg" alt="Secure Payment" className="w-24 h-24 mb-4" />
+                <h1 className="text-2xl font-bold text-gray-800">Complete Your Payment</h1>
+                <p className="text-gray-600 mt-2 mb-6">Total Amount: ₹3,097</p>
+                <div className="w-full max-w-sm bg-white p-6 rounded-lg shadow-md">
+                    <p className="font-semibold text-left mb-4">Select Payment Method</p>
+                    <div className="space-y-3">
+                        <div className="flex items-center justify-between border p-3 rounded-lg bg-gray-100">
+                            <span>UPI / QR Code</span><span className="text-gray-400 font-bold">&gt;</span>
+                        </div>
+                        <div className="flex items-center justify-between border p-3 rounded-lg">
+                            <span>Credit / Debit Card</span><span className="text-gray-400 font-bold">&gt;</span>
+                        </div>
+                    </div>
+                     <div className="mt-6 w-full bg-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg flex items-center justify-center">
+                        <span>Paying...</span>
+                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin ml-2"></div>
+                    </div>
+                </div>
+                <p className="text-xs text-gray-400 mt-4">This is a secure, simulated payment page.</p>
+            </div>
+        );
+
+        // --- Main App Component ---
+        function App() {
+          const [currentScreen, setCurrentScreen] = useState('chat');
+          const [messages, setMessages] = useState([]);
+          const [showTyping, setShowTyping] = useState(false);
+
+          const simulationSteps = useMemo(() => [
+            { type: 'message', content: { message: "Hello! Welcome to My Awesome Store. Here's what's available today:", isUser: false }},
+            { type: 'message', content: { message: "1. Handcrafted Clay Vase - ₹1299\n2. Organic Cotton Scarf - ₹899", isUser: false }},
+            { type: 'message', content: { message: "Just tell me what you'd like to order.", isUser: false }},
+            { type: 'wait', duration: 2500 },
+            { type: 'message', content: { message: "Hi, I'd like one clay vase and two scarves please", isUser: true }},
+            { type: 'typing', duration: 2500 },
+            { type: 'message', content: { message: "Awesome! Let me confirm:\n- 1x Handcrafted Clay Vase (₹1299)\n- 2x Organic Cotton Scarf (₹1798)\n\nTotal: ₹3,097. Is this correct?", isUser: false }},
+            { type: 'wait', duration: 2000 },
+            { type: 'message', content: { message: "Yes, looks good!", isUser: true }},
+            { type: 'typing', duration: 2000 },
+            { type: 'message', content: { message: "Perfect. Please complete your payment here:\npay.watfy.ai/12345", isUser: false }},
+            { type: 'switch_screen', screen: 'payment', delay: 2500 },
+            { type: 'wait', duration: 4000 },
+            { type: 'switch_screen', screen: 'chat', delay: 0 },
+            { type: 'message', content: { message: "Paid!", isUser: true } },
+            { type: 'typing', duration: 2000 },
+            { type: 'message', content: { message: "Thank you! 🙏 Your order #12345 is confirmed. We'll notify you once it's shipped.", isUser: false }},
+            { type: 'wait', duration: 6000 },
+            { type: 'reset' }
+          ], []);
+
+          useEffect(() => {
+            let stepIndex = 0;
+            let timeoutId;
+            const runSimulation = () => {
+              if (stepIndex >= simulationSteps.length) return;
+              const step = simulationSteps[stepIndex];
+              switch (step.type) {
+                case 'message':
+                  setMessages(prev => [...prev, step.content]);
+                  timeoutId = setTimeout(runSimulation, step.content.isUser ? 1500 : 1200);
+                  break;
+                case 'typing':
+                  setShowTyping(true);
+                  timeoutId = setTimeout(() => {
+                    setShowTyping(false);
+                    runSimulation();
+                  }, step.duration);
+                  break;
+                case 'switch_screen':
+                   timeoutId = setTimeout(() => {
+                    setCurrentScreen(step.screen);
+                    runSimulation();
+                   }, step.delay);
+                   break;
+                case 'wait':
+                    timeoutId = setTimeout(runSimulation, step.duration);
+                    break;
+                case 'reset':
+                    timeoutId = setTimeout(() => {
+                        setMessages([]);
+                        setCurrentScreen('chat');
+                        stepIndex = -1; 
+                        runSimulation();
+                    }, 1500);
+                    break;
+                default:
+                    runSimulation();
+                    break;
+              }
+              stepIndex++;
+            };
+            timeoutId = setTimeout(runSimulation, 500);
+            return () => clearTimeout(timeoutId);
+          }, [simulationSteps]);
+
+          return (
+            <div className="bg-transparent flex items-center justify-center font-sans">
+              <PhoneMockup>
+                <div className="transition-opacity duration-500 ease-in-out w-full h-full">
+                    {currentScreen === 'chat' && <WhatsAppScreen messages={messages} showTyping={showTyping} />}
+                    {currentScreen === 'payment' && <PaymentScreen />}
+                </div>
+              </PhoneMockup>
+            </div>
+          );
+        }
+
+        // Render the App to the #simulation-root div
+        ReactDOM.render(<App />, document.getElementById('simulation-root'));
+    </script>
 </body>
 </html>
