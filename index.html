@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watfy - Launch. Sell. Grow. All on WhatsApp.</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light blue-gray background */
+        }
+        /* Custom button styling */
+        .btn-primary {
+            @apply bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-xl shadow-lg transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-300;
+        }
+        .btn-secondary {
+            @apply bg-white text-green-700 font-bold py-3 px-6 rounded-xl shadow-lg border border-green-600 transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-300;
+        }
+        /* Gradient for hero section background */
+        .hero-gradient {
+            background-image: linear-gradient(to bottom right, #e0f2f7, #c5e6f3); /* Light blue to slightly darker blue */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Hero Section (First Fold) -->
+    <section class="hero-gradient py-16 md:py-24 px-4 text-center rounded-b-3xl shadow-xl">
+        <div class="max-w-4xl mx-auto">
+            <!-- Headline -->
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
+                <span class="text-green-600">Launch. Sell. Grow.</span> All on WhatsApp.
+            </h1>
+            <!-- Subheadline -->
+            <p class="text-lg md:text-xl text-gray-700 mb-10 max-w-2xl mx-auto">
+                Start selling where your customers already are — in their chats. No app. No website. Just your store, running inside WhatsApp with AI doing the heavy lifting.
+            </p>
+            <!-- Call to Action Button (CTA) -->
+            <a href="#" class="btn-primary inline-flex items-center space-x-2">
+                <span>Start Free Store in 30 Seconds</span>
+                <span class="font-normal text-xl">&rarr;</span>
+            </a>
+            <p class="text-sm md:text-base text-gray-600 mt-4">
+                <span class="font-semibold text-green-700">&#x2705;</span> No setup fees &bull; No coding &bull; No nonsense
+            </p>
+            <!-- Optional: Demo Video/GIF Placeholder -->
+            <div class="mt-12 md:mt-16 bg-gray-200 rounded-2xl overflow-hidden shadow-inner w-full max-w-3xl mx-auto aspect-video flex items-center justify-center">
+                <p class="text-gray-500 text-lg">20-second looping demo video/GIF placeholder</p>
+                <!-- In a real app, you'd embed a video here, e.g.: -->
+                <!-- <video src="your-demo-video.mp4" autoplay loop muted class="w-full h-full object-cover rounded-2xl"></video> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: “The Problem” — What Sellers Are Struggling With -->
+    <section class="py-16 md:py-20 px-4 bg-gray-50 text-center">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+                <span class="text-red-600">Why Most Small Sellers Struggle</span> to Grow
+            </h2>
+            <p class="text-lg text-gray-700 mb-10 max-w-3xl mx-auto">
+                Selling online should be easy. But for most small businesses in India, it’s a maze of tech, tools, and tension.
+            </p>
+            <h3 class="text-2xl font-semibold text-gray-800 mb-8">Here’s what’s broken:</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                <div class="flex items-start bg-white p-6 rounded-2xl shadow-md border border-gray-100">
+                    <span class="text-3xl text-red-500 mr-4">📉</span>
+                    <div>
+                        <h4 class="font-semibold text-xl text-gray-900 mb-2">Website Hassle</h4>
+                        <p class="text-gray-700">90% of SMBs don’t have a website or can’t maintain one.</p>
+                    </div>
+                </div>
+                <div class="flex items-start bg-white p-6 rounded-2xl shadow-md border border-gray-100">
+                    <span class="text-3xl text-red-500 mr-4">📵</span>
+                    <div>
+                        <h4 class="font-semibold text-xl text-gray-900 mb-2">App Fatigue</h4>
+                        <p class="text-gray-700">Customers hate downloading apps just to browse.</p>
+                    </div>
+                </div>
+                <div class="flex items-start bg-white p-6 rounded-2xl shadow-md border border-gray-100">
+                    <span class="text-3xl text-red-500 mr-4">🧠</span>
+                    <div>
+                        <h4 class="font-semibold text-xl text-gray-900 mb-2">Too Many Tools</h4>
+                        <p class="text-gray-700">One for catalog, another for payments, another for chats.</p>
+                    </div>
+                </div>
+                <div class="flex items-start bg-white p-6 rounded-2xl shadow-md border border-gray-100">
+                    <span class="text-3xl text-red-500 mr-4">💬</span>
+                    <div>
+                        <h4 class="font-semibold text-xl text-gray-900 mb-2">Messy WhatsApp DMs</h4>
+                        <p class="text-gray-700">No orders, no follow-ups, no system.</p>
+                    </div>
+                </div>
+                <div class="flex items-start bg-white p-6 rounded-2xl shadow-md border border-gray-100 col-span-1 md:col-span-2 mx-auto max-w-md">
+                    <span class="text-3xl text-red-500 mr-4">💸</span>
+                    <div>
+                        <h4 class="font-semibold text-xl text-gray-900 mb-2">Slow Growth</h4>
+                        <p class="text-gray-700">Sales depend on you being online 24x7.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: “Our Solution” — How Watfy Fixes It -->
+    <section class="py-16 md:py-20 px-4 bg-white text-center">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+                <span class="text-green-600">Watfy: The Fastest Way</span> to Start & Grow Your Business
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
+                <div class="flex items-start bg-green-50 p-6 rounded-2xl shadow-md border border-green-100">
+                    <span class="text-3xl text-green-600 mr-4">🔹</span>
+                    <div>
+                        <h4 class="font-semibold text-xl text-gray-900 mb-2">30-Second Setup</h4>
+                        <p class="text-gray-700">Set up your WhatsApp Store in 30 seconds.</p>
+                    </div>
+                </div>
+                <div class="flex items-start bg-green-50 p-6 rounded-2xl shadow-md border border-green-100">
+                    <span class="text-3xl text-green-600 mr-4">🔹</span>
+                    <div>
+                        <h4 class="font-semibold text-xl text-gray-900 mb-2">Shoppable Catalog</h4>
+                        <p class="text-gray-700">Share product photos — we make it a shoppable catalog.</p>
+                    </div>
+                </div>
+                <div class="flex items-start bg-green-50 p-6 rounded-2xl shadow-md border border-green-100">
+                    <span class="text-3xl text-green-600 mr-4">🔹</span>
+                    <div>
+                        <h4 class="font-semibold text-xl text-gray-900 mb-2">AI Sales Automation</h4>
+                        <p class="text-gray-700">AI handles chats, closes deals, and collects payments.</p>
+                    </div>
+                </div>
+                <div class="flex items-start bg-green-50 p-6 rounded-2xl shadow-md border border-green-100">
+                    <span class="text-3xl text-green-600 mr-4">🔹</span>
+                    <div>
+                        <h4 class="font-semibold text-xl text-gray-900 mb-2">No Tech Needed</h4>
+                        <p class="text-gray-700">No websites, apps, or agencies needed.</p>
+                    </div>
+                </div>
+            </div>
+            <p class="text-2xl font-bold text-gray-800 mt-12">
+                <span class="text-red-600">💥</span> One chat. One tool. Infinite growth.
+            </p>
+        </div>
+    </section>
+
+    <!-- Section 2: Bold Credibility Claim -->
+    <section class="py-16 md:py-20 px-4 bg-gray-100 text-center">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+                <span class="text-yellow-500">⚡️</span> The Future of Commerce Is Already in Your WhatsApp.
+            </h2>
+            <p class="text-lg md:text-xl text-gray-700 mb-10 max-w-3xl mx-auto">
+                Your customers don’t want to download apps. They don’t visit websites.
+                They shop where they chat — and Watfy turns your DMs into a full-blown store with catalog, payments, and AI follow-ups.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Key Highlight 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-200 flex flex-col items-center text-center">
+                    <span class="text-4xl mb-4">🛍️</span>
+                    <h3 class="font-semibold text-xl text-gray-900 mb-2">Auto-generate catalog from your Instagram posts</h3>
+                </div>
+                <!-- Key Highlight 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-200 flex flex-col items-center text-center">
+                    <span class="text-4xl mb-4">🤖</span>
+                    <h3 class="font-semibold text-xl text-gray-900 mb-2">AI responds, closes sales, and collects payments — even while you sleep</h3>
+                </div>
+                <!-- Key Highlight 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-200 flex flex-col items-center text-center">
+                    <span class="text-4xl mb-4">📦</span>
+                    <h3 class="font-semibold text-xl text-gray-900 mb-2">100% WhatsApp native: No apps. No tech headaches.</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Core Benefits (with icons or visual blocks) -->
+    <section class="py-16 md:py-20 px-4 bg-white text-center">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+                <span class="text-orange-600">🚀</span> Start Selling in 3 Easy Steps
+            </h2>
+            <div class="space-y-10">
+                <!-- Step 1 -->
+                <div class="flex flex-col md:flex-row items-center md:items-start text-center md:text-left bg-gray-50 p-6 rounded-2xl shadow-md border border-gray-100">
+                    <div class="flex-shrink-0 mb-4 md:mb-0 md:mr-6 text-orange-600 font-extrabold text-5xl">1.</div>
+                    <div>
+                        <h3 class="font-bold text-2xl text-gray-900 mb-2">Send Your Products</h3>
+                        <p class="text-lg text-gray-700">Share photos, videos, or your Insta handle — we turn it into a store.</p>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="flex flex-col md:flex-row items-center md:items-start text-center md:text-left bg-gray-50 p-6 rounded-2xl shadow-md border border-gray-100">
+                    <div class="flex-shrink-0 mb-4 md:mb-0 md:mr-6 text-orange-600 font-extrabold text-5xl">2.</div>
+                    <div>
+                        <h3 class="font-bold text-2xl text-gray-900 mb-2">Go Live on WhatsApp</h3>
+                        <p class="text-lg text-gray-700">Your customers browse, order, and pay — all inside chat.</p>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="flex flex-col md:flex-row items-center md:items-start text-center md:text-left bg-gray-50 p-6 rounded-2xl shadow-md border border-gray-100">
+                    <div class="flex-shrink-0 mb-4 md:mb-0 md:mr-6 text-orange-600 font-extrabold text-5xl">3.</div>
+                    <div>
+                        <h3 class="font-bold text-2xl text-gray-900 mb-2">Let AI Handle Sales</h3>
+                        <p class="text-lg text-gray-700">Watfy’s agent handles inquiries, tracks orders, and sends reminders.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: “Empowering Indian SMBs” -->
+    <section class="py-16 md:py-20 px-4 bg-blue-50 text-center">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+                <span class="text-blue-600">✊ Built for India’s</span> Real Entrepreneurs
+            </h2>
+            <p class="text-lg md:text-xl text-gray-700 mb-10 max-w-3xl mx-auto">
+                From home bakers to boutique brands, Watfy is for the 70 million Indian SMBs who’ve been ignored by traditional e-commerce platforms.
+            </p>
+            <h3 class="text-2xl font-semibold text-gray-800 mb-8">We empower you with:</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                <div class="flex items-start bg-white p-6 rounded-2xl shadow-md border border-blue-100">
+                    <span class="text-3xl text-blue-600 mr-4">🚀</span>
+                    <div>
+                        <h4 class="font-semibold text-xl text-gray-900 mb-2">Instant Launch</h4>
+                        <p class="text-gray-700">No waiting, no setup fee.</p>
+                    </div>
+                </div>
+                <div class="flex items-start bg-white p-6 rounded-2xl shadow-md border border-blue-100">
+                    <span class="text-3xl text-blue-600 mr-4">🤖</span>
+                    <div>
+                        <h4 class="font-semibold text-xl text-gray-900 mb-2">AI Sales Agent</h4>
+                        <p class="text-gray-700">Sell even when you’re offline.</p>
+                    </div>
+                </div>
+                <div class="flex items-start bg-white p-6 rounded-2xl shadow-md border border-blue-100">
+                    <span class="text-3xl text-blue-600 mr-4">📈</span>
+                    <div>
+                        <h4 class="font-semibold text-xl text-gray-900 mb-2">Business Insights</h4>
+                        <p class="text-gray-700">Know what’s working and double down.</p>
+                    </div>
+                </div>
+                <div class="flex items-start bg-white p-6 rounded-2xl shadow-md border border-blue-100">
+                    <span class="text-3xl text-blue-600 mr-4">📲</span>
+                    <div>
+                        <h4 class="font-semibold text-xl text-gray-900 mb-2">WhatsApp-Native Experience</h4>
+                        <p class="text-gray-700">Your customers already trust it.</p>
+                    </div>
+                </div>
+                <div class="flex items-start bg-white p-6 rounded-2xl shadow-md border border-blue-100 col-span-1 md:col-span-2 mx-auto max-w-md">
+                    <span class="text-3xl text-blue-600 mr-4">💬</span>
+                    <div>
+                        <h4 class="font-semibold text-xl text-gray-900 mb-2">Local Language Ready</h4>
+                        <p class="text-gray-700">Hindi, Telugu, Tamil… we’ve got you covered.</p>
+                    </div>
+                </div>
+            </div>
+            <p class="text-lg md:text-xl font-bold text-gray-800 mt-12">
+                <span class="text-yellow-500">⚡</span> Whether you’re selling pickles in Hyderabad or jewellery on Instagram — Watfy is your growth engine.
+            </p>
+        </div>
+    </section>
+
+    <!-- Section 4: Social Proof (Trust = Conversions) -->
+    <section class="py-16 md:py-20 px-4 bg-gray-50 text-center">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+                <span class="text-gray-600">💬 What Early Sellers Are Saying</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 flex flex-col items-center text-center">
+                    <blockquote class="text-xl md:text-2xl italic text-gray-800 mb-6">
+                        “I went from 0 to ₹30K/month just using my WhatsApp. Watfy made it look easy.”
+                    </blockquote>
+                    <p class="font-semibold text-lg text-gray-700">- Happy Seller 1</p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 flex flex-col items-center text-center">
+                    <blockquote class="text-xl md:text-2xl italic text-gray-800 mb-6">
+                        “I’m an Instagram artist — Watfy turned my followers into real buyers.”
+                    </blockquote>
+                    <p class="font-semibold text-lg text-gray-700">- Creative Entrepreneur</p>
+                </div>
+            </div>
+            <!-- Optional: Credibility Tags -->
+            <div class="mt-12 text-gray-600 text-lg md:text-xl font-semibold">
+                <p>#MadeInIndia • Trusted by 500+ Sellers • Used by D2C brands in 10+ cities</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-16 md:py-20 px-4 bg-white text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+                Simple & Transparent Pricing
+            </h2>
+            <div class="bg-green-50 p-8 rounded-2xl shadow-lg border-2 border-green-200">
+                <p class="text-4xl md:text-5xl font-extrabold text-green-700 mb-4">
+                    ₹99<span class="text-xl text-gray-600">/month</span> + <span class="text-green-800">1% on sale</span>
+                </p>
+                <p class="text-lg md:text-xl text-gray-800 max-w-2xl mx-auto leading-relaxed">
+                    <span class="font-bold text-green-700">👉 “You pay a token fee to enable your store on platform, and we only win when you win.”</span>
+                </p>
+                <p class="text-md text-gray-600 mt-4">
+                    A psychologically appealing and low-friction model — ideal for SMBs and creators.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Aggressive CTA + Urgency -->
+    <section class="py-16 md:py-20 px-4 bg-green-700 text-center rounded-t-3xl shadow-xl">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+                <span class="text-yellow-300">🔥</span> Ready to Sell Smarter?
+            </h2>
+            <p class="text-lg md:text-xl text-green-100 mb-10 max-w-2xl mx-auto">
+                Launch your AI-powered WhatsApp Store in under a minute — no developer, no app store, no BS.
+            </p>
+            <!-- CTA Button -->
+            <a href="#" class="btn-secondary inline-flex items-center space-x-2">
+                <span>Launch Free WhatsApp Store Now</span>
+                <span class="font-normal text-xl">&rarr;</span>
+            </a>
+            <div class="text-sm md:text-base text-green-200 mt-4 space-y-1">
+                <p><span class="font-semibold text-green-100">&#x2713;</span> Instant setup</p>
+                <p><span class="font-semibold text-green-100">&#x2713;</span> Zero fees to start</p>
+                <p><span class="font-semibold text-green-100">&#x2713;</span> Built for Indian & NRI sellers</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Optional Advanced Section: Feature Breakdown -->
+    <section class="py-16 md:py-20 px-4 bg-gray-100 text-center">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+                Powerful Features at Your Fingertips
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+                <!-- Feature 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-200">
+                    <h3 class="font-bold text-xl text-gray-900 mb-2">Smart Catalogs</h3>
+                    <p class="text-gray-700">Auto-sync with Instagram and effortlessly create your product listings.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-200">
+                    <h3 class="font-bold text-xl text-gray-900 mb-2">AI Assistant</h3>
+                    <p class="text-gray-700">Answers FAQs, closes sales, and provides 24/7 customer support.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-200">
+                    <h3 class="font-bold text-xl text-gray-900 mb-2">Payments</h3>
+                    <p class="text-gray-700">Collect UPI or Stripe payments easily and securely, directly in chat.</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-200">
+                    <h3 class="font-bold text-xl text-gray-900 mb-2">Broadcast Deals</h3>
+                    <p class="text-gray-700">Send bulk offers and promotions to your customer base with a single click.</p>
+                </div>
+                <!-- Feature 5 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-200">
+                    <h3 class="font-bold text-xl text-gray-900 mb-2">Insights</h3>
+                    <p class="text-gray-700">Gain valuable data on what sells, who buys, and when, to optimize your strategy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-12 px-4 rounded-t-3xl">
+        <div class="max-w-5xl mx-auto text-center md:flex md:justify-between md:items-center">
+            <div class="mb-6 md:mb-0">
+                <p class="text-lg font-semibold">&copy; 2025 Watfy</p>
+            </div>
+            <div class="flex flex-wrap justify-center space-x-6 mb-6 md:mb-0">
+                <a href="#" class="text-gray-300 hover:text-white transition duration-200">Privacy Policy</a>
+                <span class="text-gray-500">|</span>
+                <a href="#" class="text-gray-300 hover:text-white transition duration-200">Terms</a>
+            </div>
+            <div class="flex justify-center space-x-6 items-center">
+                <a href="#" class="text-gray-300 hover:text-white transition duration-200">Instagram</a>
+                <a href="#" class="text-gray-300 hover:text-white transition duration-200">WhatsApp</a>
+                <a href="#" class="text-gray-300 hover:text-white transition duration-200">Contact Us</a>
+                <a href="#" class="btn-primary text-sm px-4 py-2 inline-flex items-center space-x-1">
+                    <span class="text-lg">&#x1F4AC;</span> <!-- Chat bubble emoji for WhatsApp -->
+                    <span>WhatsApp us now</span>
+                    <span class="font-normal text-lg">&rarr;</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
