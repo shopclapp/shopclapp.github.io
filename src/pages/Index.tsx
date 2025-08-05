@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { MessageCircle, Bot, Zap, Square, Circle, Triangle, ArrowRight, CheckCircle, Menu, X } from 'lucide-react';
 
 const Index = () => {
@@ -14,6 +15,24 @@ const Index = () => {
     e.preventDefault();
     console.log('Demo booking:', { name, whatsapp });
   };
+
+  const testimonials = [
+    {
+      quote: "Clapp transformed our WhatsApp into a complete business platform. Sales increased by 300% in just 2 months.",
+      name: "Rajesh Kumar",
+      title: "Founder, Delhi Spice Co."
+    },
+    {
+      quote: "The AI automation has revolutionized how we handle customer inquiries. Our response time improved dramatically.",
+      name: "Sheetal",
+      title: "Founder, Desify"
+    },
+    {
+      quote: "WhatsApp commerce was a game-changer for our organic products business. Customer engagement is at an all-time high.",
+      name: "Sanil",
+      title: "Founder, Organics and You"
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-white">
@@ -306,14 +325,32 @@ const Index = () => {
 
       {/* Testimonials Section */}
       <section className="py-16 md:py-24">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <blockquote className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium text-gray-900 mb-6 md:mb-8 leading-relaxed">
-            "Clapp transformed our WhatsApp into a complete business platform. Sales increased by 300% in just 2 months."
-          </blockquote>
-          <div className="text-base md:text-lg text-gray-600">
-            <div className="font-semibold">Rajesh Kumar</div>
-            <div>Founder, Delhi Spice Co.</div>
-          </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent>
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index}>
+                  <div className="text-center">
+                    <blockquote className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium text-gray-900 mb-6 md:mb-8 leading-relaxed">
+                      "{testimonial.quote}"
+                    </blockquote>
+                    <div className="text-base md:text-lg text-gray-600">
+                      <div className="font-semibold">{testimonial.name}</div>
+                      <div>{testimonial.title}</div>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-4 md:-left-12" />
+            <CarouselNext className="right-4 md:-right-12" />
+          </Carousel>
         </div>
       </section>
 
