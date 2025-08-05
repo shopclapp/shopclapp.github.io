@@ -1,20 +1,12 @@
-
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { MessageCircle, Bot, Zap, Square, Circle, Triangle, ArrowRight, CheckCircle, Menu, X } from 'lucide-react';
+import { MessageCircle, Square, Circle, Triangle, CheckCircle, Menu, X } from 'lucide-react';
+import WhatsAppDemo from "@/components/WhatsAppDemo"; // Import the new component
 
 const Index = () => {
-  const [name, setName] = useState('');
-  const [whatsapp, setWhatsapp] = useState('');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const handleWaitlistSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Demo booking:', { name, whatsapp });
-  };
 
   const testimonials = [
     {
@@ -36,7 +28,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
+      {/* ... (Navigation remains the same) ... */}
       <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4 md:py-6">
@@ -47,7 +39,6 @@ const Index = () => {
               <span className="ml-2 md:ml-3 text-xl md:text-2xl font-bold text-gray-900">Clapp</span>
             </div>
             
-            {/* Mobile menu button */}
             <div className="md:hidden">
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -57,7 +48,6 @@ const Index = () => {
               </button>
             </div>
 
-            {/* Desktop navigation */}
             <div className="hidden md:flex items-center space-x-8">
               <a href="#features" className="text-gray-600 hover:text-gray-900 transition-colors">Features</a>
               <a href="#pricing" className="text-gray-600 hover:text-gray-900 transition-colors">Pricing</a>
@@ -74,31 +64,12 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Mobile navigation menu */}
           {mobileMenuOpen && (
             <div className="md:hidden border-t border-gray-100 py-4">
               <div className="flex flex-col space-y-4">
-                <a 
-                  href="#features" 
-                  className="text-gray-600 hover:text-gray-900 transition-colors px-4 py-2"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Features
-                </a>
-                <a 
-                  href="#pricing" 
-                  className="text-gray-600 hover:text-gray-900 transition-colors px-4 py-2"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Pricing
-                </a>
-                <a 
-                  href="#contact" 
-                  className="text-gray-600 hover:text-gray-900 transition-colors px-4 py-2"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Contact
-                </a>
+                <a href="#features" className="text-gray-600 hover:text-gray-900 transition-colors px-4 py-2" onClick={() => setMobileMenuOpen(false)}>Features</a>
+                <a href="#pricing" className="text-gray-600 hover:text-gray-900 transition-colors px-4 py-2" onClick={() => setMobileMenuOpen(false)}>Pricing</a>
+                <a href="#contact" className="text-gray-600 hover:text-gray-900 transition-colors px-4 py-2" onClick={() => setMobileMenuOpen(false)}>Contact</a>
                 <a
                   href="https://wa.me/14707342241?text=Book%20demo."
                   target="_blank"
@@ -144,8 +115,23 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Feature Showcase Section */}
-      <section className="py-16 md:py-20 bg-gray-50">
+      {/* NEW: Demo Section */}
+      <section className="py-16 md:py-24 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
+              See It In Action
+            </h2>
+            <p className="mt-4 text-lg text-gray-600">
+              Watch our AI handle a complete purchase in real-time.
+            </p>
+          </div>
+          <WhatsAppDemo />
+        </div>
+      </section>
+
+      {/* ... (Rest of the sections remain the same) ... */}
+      <section className="py-16 md:py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8 md:gap-12 mb-12 md:mb-16">
             <div className="text-center">
@@ -173,7 +159,6 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Stats */}
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-6 sm:space-y-0 sm:space-x-8 md:space-x-12">
             <div className="text-center">
               <div className="flex items-center justify-center mb-2">
