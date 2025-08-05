@@ -30,9 +30,15 @@ const Index = () => {
               <a href="#features" className="text-gray-600 hover:text-gray-900 transition-colors">Features</a>
               <a href="#pricing" className="text-gray-600 hover:text-gray-900 transition-colors">Pricing</a>
               <a href="#contact" className="text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
-              <Button className="bg-gray-900 hover:bg-gray-800 text-white px-6 py-2 rounded-lg shadow-sm">
-                Book Free Demo
-              </Button>
+              <a
+  href="https://wa.me/14707342241?text=Book%20demo."
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-gray-900 hover:bg-gray-800 text-white px-6 py-2 rounded-lg shadow-sm"
+  style={{ textDecoration: 'none' }}
+>
+  Book Free Demo
+</a>
             </div>
           </div>
         </div>
@@ -55,7 +61,7 @@ const Index = () => {
             Run your entire business on WhatsApp!
           </p>
           
-          <form onSubmit={handleWaitlistSubmit} className="max-w-md mx-auto mb-16">
+{/*           <form onSubmit={handleWaitlistSubmit} className="max-w-md mx-auto mb-16">
             <div className="flex gap-3 mb-4">
               <Input
                 placeholder="Your Name"
@@ -75,7 +81,17 @@ const Index = () => {
             <Button type="submit" className="w-full h-12 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded-lg shadow-sm">
               Book Free Demo
             </Button>
-          </form>
+          </form> */}
+          <a
+  href="https://wa.me/14707342241?text=Book%20demo."
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block w-full h-12 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded-lg shadow-sm flex items-center justify-center text-center mb-16"
+  style={{ textDecoration: 'none' }}
+>
+  Book Free Demo
+</a>
+
         </div>
       </section>
 
