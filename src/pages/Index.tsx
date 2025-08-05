@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { MessageCircle, Square, Circle, Triangle, CheckCircle, Menu, X } from 'lucide-react';
-import WhatsAppDemo from "@/components/WhatsAppDemo"; // Import the new component
+import WhatsAppDemo from "@/components/WhatsAppDemo";
 
 const Index = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -86,52 +86,47 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
+      {/* Hero Section with WhatsApp Demo */}
       <section className="pt-12 md:pt-20 pb-16 md:pb-24">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center mb-6 md:mb-8">
-            <div className="w-5 h-5 md:w-6 md:h-6 bg-gradient-to-br from-emerald-400 to-blue-500 rounded-full mr-2 md:mr-3"></div>
-            <span className="text-xs md:text-sm font-medium text-gray-600">Redefining Commerce</span>
-          </div>
-          
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 md:mb-8 leading-tight">
-            AI-Powered.<br />
-            WhatsApp-Native.
-          </h1>
-          
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 md:mb-12 max-w-3xl mx-auto px-4">
-            Run your entire business on WhatsApp!
-          </p>
-          
-          <a
-            href="https://wa.me/14707342241?text=Book%20demo."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block w-full max-w-md mx-auto h-12 md:h-12 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded-lg shadow-sm flex items-center justify-center text-center mb-12 md:mb-16 text-sm md:text-base"
-            style={{ textDecoration: 'none' }}
-          >
-            Book Free Demo
-          </a>
-        </div>
-      </section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+            {/* Hero Content */}
+            <div className="text-center lg:text-left">
+              <div className="inline-flex items-center mb-6 md:mb-8">
+                <div className="w-5 h-5 md:w-6 md:h-6 bg-gradient-to-br from-emerald-400 to-blue-500 rounded-full mr-2 md:mr-3"></div>
+                <span className="text-xs md:text-sm font-medium text-gray-600">Redefining Commerce</span>
+              </div>
+              
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 md:mb-8 leading-tight">
+                AI-Powered.<br />
+                WhatsApp-Native.
+              </h1>
+              
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 md:mb-12 max-w-3xl lg:max-w-none mx-auto lg:mx-0">
+                Run your entire business on WhatsApp!
+              </p>
+              
+              <a
+                href="https://wa.me/14707342241?text=Book%20demo."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block w-full max-w-md lg:max-w-xs h-12 md:h-12 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded-lg shadow-sm flex items-center justify-center text-center text-sm md:text-base"
+                style={{ textDecoration: 'none' }}
+              >
+                Book Free Demo
+              </a>
+            </div>
 
-      {/* NEW: Demo Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
-              See It In Action
-            </h2>
-            <p className="mt-4 text-lg text-gray-600">
-              Watch our AI handle a complete purchase in real-time.
-            </p>
+            {/* WhatsApp Demo */}
+            <div className="flex justify-center lg:justify-end">
+              <WhatsAppDemo />
+            </div>
           </div>
-          <WhatsAppDemo />
         </div>
       </section>
 
       {/* Feature Showcase Section */}
-      <section className="py-16 md:py-20 bg-white">
+      <section id="features" className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8 md:gap-12 mb-12 md:mb-16">
             <div className="text-center">
@@ -183,7 +178,7 @@ const Index = () => {
       </section>
 
       {/* Detailed Features Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Feature 1 */}
           <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center mb-16 md:mb-24">
@@ -309,7 +304,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Carousel
             opts={{
@@ -340,7 +335,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 md:py-12 border-t border-gray-200 bg-white">
+      <footer id="contact" className="py-8 md:py-12 border-t border-gray-200 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex items-center">
@@ -354,7 +349,7 @@ const Index = () => {
               <a href="#pricing" className="text-gray-600 hover:text-gray-900">Pricing</a>
               <a href="#" className="text-gray-600 hover:text-gray-900">Book Demo</a>
               <a href="#" className="text-gray-600 hover:text-gray-900">FAQ</a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">Contact</a>
+              <a href="#contact" className="text-gray-600 hover:text-gray-900">Contact</a>
               <a href="#" className="text-gray-600 hover:text-gray-900">WhatsApp</a>
             </div>
           </div>
