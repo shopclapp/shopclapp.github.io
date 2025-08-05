@@ -116,9 +116,26 @@ const WhatsAppDemo = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const [isTyping, setIsTyping] = useState(false);
   const chatEndRef = useRef<HTMLDivElement>(null);
+  const chatContainerRef = useRef<HTMLDivElement>(null);
 
+  // Fixed scroll behavior - only scroll within the chat container
   useEffect(() => {
-    chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (chatContainerRef.current && chatEndRef.current) {
+      const container = chatContainerRef.current;
+      const chatEnd = chatEndRef.current;
+      
+      // Scroll within the container only
+      const containerRect = container.getBoundingClientRect();
+      const chatEndRect = chatEnd.getBoundingClientRect();
+      
+      if (chatEndRect.bottom > containerRect.bottom || chatEndRect.top < containerRect.top) {
+        chatEnd.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'end',
+          inline: 'nearest'
+        });
+      }
+    }
   }, [messages, isTyping]);
 
   useEffect(() => {
@@ -175,7 +192,11 @@ const WhatsAppDemo = () => {
       </div>
       
       <CardContent className="p-0">
-        <div className="h-[28rem] overflow-y-auto p-4 bg-gray-50">
+        <div 
+          ref={chatContainerRef}
+          className="h-[28rem] overflow-y-auto p-4 bg-gray-50 scroll-smooth"
+          style={{ scrollBehavior: 'smooth' }}
+        >
           {messages.map((message) => (
             <div key={message.id} className={`flex ${message.type === 'bot' ? 'justify-start' : 'justify-end'} mb-3`}>
               <div className={`max-w-xs px-3 py-2 rounded-xl ${
