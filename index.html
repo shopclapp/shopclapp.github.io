@@ -16,6 +16,18 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <script>
+      // Fix for GitHub Pages MIME type issues
+      if (location.hostname === 'username.github.io' || location.hostname.includes('.github.io')) {
+        const scripts = document.querySelectorAll('script[type="module"]');
+        scripts.forEach(script => {
+          if (script.src && !script.src.includes('data:')) {
+            script.setAttribute('crossorigin', 'anonymous');
+          }
+        });
+      }
+    </script>
   </head>
 
   <body>
