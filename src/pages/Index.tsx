@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -87,22 +88,22 @@ const Index = () => {
       </nav>
 
       {/* Hero Section with WhatsApp Demo */}
-      <section className="pt-12 md:pt-20 pb-16 md:pb-24">
+      <section className="pt-8 sm:pt-12 lg:pt-20 pb-12 sm:pb-16 lg:pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             {/* Hero Content */}
-            <div className="text-center lg:text-left">
-              <div className="inline-flex items-center mb-6 md:mb-8">
-                <div className="w-5 h-5 md:w-6 md:h-6 bg-gradient-to-br from-emerald-400 to-blue-500 rounded-full mr-2 md:mr-3"></div>
-                <span className="text-xs md:text-sm font-medium text-gray-600">Redefining Commerce</span>
+            <div className="text-center lg:text-left order-2 lg:order-1">
+              <div className="inline-flex items-center mb-4 sm:mb-6 lg:mb-8">
+                <div className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 bg-gradient-to-br from-emerald-400 to-blue-500 rounded-full mr-2 sm:mr-3"></div>
+                <span className="text-xs sm:text-sm font-medium text-gray-600">Redefining Commerce</span>
               </div>
               
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 md:mb-8 leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-4 sm:mb-6 lg:mb-8 leading-tight">
                 AI-Powered.<br />
                 WhatsApp-Native.
               </h1>
               
-              <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 md:mb-12 max-w-3xl lg:max-w-none mx-auto lg:mx-0">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mb-6 sm:mb-8 lg:mb-12 max-w-2xl mx-auto lg:mx-0">
                 Run your entire business on WhatsApp!
               </p>
               
@@ -110,7 +111,7 @@ const Index = () => {
                 href="https://wa.me/14707342241?text=Book%20demo."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block w-full max-w-md lg:max-w-xs h-12 md:h-12 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded-lg shadow-sm flex items-center justify-center text-center text-sm md:text-base"
+                className="inline-block w-full sm:w-auto px-6 sm:px-8 lg:px-12 h-11 sm:h-12 lg:h-14 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded-lg shadow-sm flex items-center justify-center text-sm sm:text-base"
                 style={{ textDecoration: 'none' }}
               >
                 Book Free Demo
@@ -118,59 +119,61 @@ const Index = () => {
             </div>
 
             {/* WhatsApp Demo */}
-            <div className="flex justify-center lg:justify-end">
-              <WhatsAppDemo />
+            <div className="flex justify-center lg:justify-end order-1 lg:order-2">
+              <div className="w-full max-w-sm">
+                <WhatsAppDemo />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Feature Showcase Section */}
-      <section id="features" className="py-16 md:py-20 bg-gray-50">
+      <section id="features" className="py-12 sm:py-16 lg:py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8 md:gap-12 mb-12 md:mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-12 lg:mb-16">
             <div className="text-center">
-              <div className="w-12 h-12 md:w-16 md:h-16 bg-gray-900 rounded-2xl flex items-center justify-center mx-auto mb-4 md:mb-6">
-                <Square className="w-6 h-6 md:w-8 md:h-8 text-white" />
+              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gray-900 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 lg:mb-6">
+                <Square className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-white" />
               </div>
-              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">WhatsApp First</h3>
-              <p className="text-gray-600 text-sm md:text-base px-4">Where your customers already are. No need to drive traffic elsewhere.</p>
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">WhatsApp First</h3>
+              <p className="text-sm sm:text-base text-gray-600 px-2 sm:px-4">Where your customers already are. No need to drive traffic elsewhere.</p>
             </div>
             
             <div className="text-center">
-              <div className="w-12 h-12 md:w-16 md:h-16 bg-gray-900 rounded-2xl flex items-center justify-center mx-auto mb-4 md:mb-6">
-                <Circle className="w-6 h-6 md:w-8 md:h-8 text-white" />
+              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gray-900 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 lg:mb-6">
+                <Circle className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-white" />
               </div>
-              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">AI Handles All</h3>
-              <p className="text-gray-600 text-sm md:text-base px-4">Sales, operations, and CRM — no team required to get started.</p>
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">AI Handles All</h3>
+              <p className="text-sm sm:text-base text-gray-600 px-2 sm:px-4">Sales, operations, and CRM — no team required to get started.</p>
             </div>
             
-            <div className="text-center">
-              <div className="w-12 h-12 md:w-16 md:h-16 bg-gray-900 rounded-2xl flex items-center justify-center mx-auto mb-4 md:mb-6">
-                <Triangle className="w-6 h-6 md:w-8 md:h-8 text-white" />
+            <div className="text-center sm:col-span-2 lg:col-span-1">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gray-900 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 lg:mb-6">
+                <Triangle className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-white" />
               </div>
-              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">Fast Setup</h3>
-              <p className="text-gray-600 text-sm md:text-base px-4">Go live in 3–5 working days with full support and guidance.</p>
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">Fast Setup</h3>
+              <p className="text-sm sm:text-base text-gray-600 px-2 sm:px-4">Go live in 3–5 working days with full support and guidance.</p>
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row justify-center items-center space-y-6 sm:space-y-0 sm:space-x-8 md:space-x-12">
+          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 md:space-x-8 lg:space-x-12">
             <div className="text-center">
-              <div className="flex items-center justify-center mb-2">
+              <div className="flex items-center justify-center mb-1 sm:mb-2">
                 <div className="w-3 h-3 bg-emerald-500 rounded-full mr-2"></div>
-                <span className="text-xl md:text-2xl font-bold text-gray-900">3X Revenue</span>
+                <span className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">3X Revenue</span>
               </div>
             </div>
             <div className="text-center">
-              <div className="flex items-center justify-center mb-2">
+              <div className="flex items-center justify-center mb-1 sm:mb-2">
                 <div className="w-3 h-3 bg-blue-500 rounded-full mr-2"></div>
-                <span className="text-xl md:text-2xl font-bold text-gray-900">5X Repeat Purchase</span>
+                <span className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">5X Repeat Purchase</span>
               </div>
             </div>
             <div className="text-center">
-              <div className="flex items-center justify-center mb-2">
+              <div className="flex items-center justify-center mb-1 sm:mb-2">
                 <div className="w-3 h-3 bg-purple-500 rounded-full mr-2"></div>
-                <span className="text-xl md:text-2xl font-bold text-gray-900">75% Cost Reduction</span>
+                <span className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">75% Cost Reduction</span>
               </div>
             </div>
           </div>
@@ -178,70 +181,70 @@ const Index = () => {
       </section>
 
       {/* Detailed Features Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-12 sm:py-16 lg:py-24 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Feature 1 */}
-          <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center mb-16 md:mb-24">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-center mb-12 sm:mb-16 lg:mb-24">
             <div className="order-2 lg:order-1">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 lg:mb-6">
                 Start, Run, Grow in WhatsApp
               </h2>
-              <p className="text-base md:text-lg text-gray-600 mb-6 md:mb-8">
+              <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-4 sm:mb-6 lg:mb-8">
                 Transform your WhatsApp into a complete business platform. From customer inquiry to order fulfillment, everything happens seamlessly within the app your customers already use daily.
               </p>
-              <div className="space-y-3 md:space-y-4">
-                <div className="font-semibold text-gray-900">• We Set You Up</div>
-                <div className="font-semibold text-gray-900">• AI takes over</div>
-                <div className="font-semibold text-gray-900">• You Scale!</div>
+              <div className="space-y-2 sm:space-y-3 lg:space-y-4">
+                <div className="font-semibold text-gray-900 text-sm sm:text-base">• We Set You Up</div>
+                <div className="font-semibold text-gray-900 text-sm sm:text-base">• AI takes over</div>
+                <div className="font-semibold text-gray-900 text-sm sm:text-base">• You Scale!</div>
               </div>
             </div>
             <div className="flex justify-center order-1 lg:order-2">
-              <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 bg-gray-100 rounded-3xl flex items-center justify-center">
-                <Square className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 text-gray-400" />
+              <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 bg-gray-100 rounded-3xl flex items-center justify-center">
+                <Square className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 text-gray-400" />
               </div>
             </div>
           </div>
 
           {/* Feature 2 */}
-          <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center mb-16 md:mb-24">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-center mb-12 sm:mb-16 lg:mb-24">
             <div className="flex justify-center order-2 lg:order-1">
-              <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 bg-gray-100 rounded-3xl flex items-center justify-center">
-                <Circle className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 text-gray-400" />
+              <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 bg-gray-100 rounded-3xl flex items-center justify-center">
+                <Circle className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 text-gray-400" />
               </div>
             </div>
             <div className="order-1 lg:order-2">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 lg:mb-6">
                 Complete Commerce Automation
               </h2>
-              <p className="text-base md:text-lg text-gray-600 mb-6 md:mb-8">
+              <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-4 sm:mb-6 lg:mb-8">
                 Your AI assistant handles product catalogs, processes orders, manages payments, and tracks deliveries. No manual work required from your end.
               </p>
-              <div className="space-y-3 md:space-y-4">
-                <div className="font-semibold text-gray-900">• Catalog Management</div>
-                <div className="font-semibold text-gray-900">• Order Processing</div>
-                <div className="font-semibold text-gray-900">• Payment Integration</div>
+              <div className="space-y-2 sm:space-y-3 lg:space-y-4">
+                <div className="font-semibold text-gray-900 text-sm sm:text-base">• Catalog Management</div>
+                <div className="font-semibold text-gray-900 text-sm sm:text-base">• Order Processing</div>
+                <div className="font-semibold text-gray-900 text-sm sm:text-base">• Payment Integration</div>
               </div>
             </div>
           </div>
 
           {/* Feature 3 */}
-          <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-center">
             <div className="order-2 lg:order-1">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 lg:mb-6">
                 Built for Scale
               </h2>
-              <p className="text-base md:text-lg text-gray-600 mb-6 md:mb-8">
+              <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-4 sm:mb-6 lg:mb-8">
                 Whether you're handling 10 customers or 10,000, our platform scales with your business. Advanced analytics help you understand customer behavior and optimize operations.
               </p>
-              <div className="space-y-3 md:space-y-4">
-                <div className="font-semibold text-gray-900">• Customer Analytics</div>
-                <div className="font-semibold text-gray-900">• Business Insights</div>
-                <div className="font-semibold text-gray-900">• Performance Tracking</div>
+              <div className="space-y-2 sm:space-y-3 lg:space-y-4">
+                <div className="font-semibold text-gray-900 text-sm sm:text-base">• Customer Analytics</div>
+                <div className="font-semibold text-gray-900 text-sm sm:text-base">• Business Insights</div>
+                <div className="font-semibold text-gray-900 text-sm sm:text-base">• Performance Tracking</div>
               </div>
             </div>
             <div className="flex justify-center order-1 lg:order-2">
-              <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 bg-gray-100 rounded-3xl flex items-center justify-center">
-                <Triangle className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 text-gray-400" />
+              <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 bg-gray-100 rounded-3xl flex items-center justify-center">
+                <Triangle className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 text-gray-400" />
               </div>
             </div>
           </div>
@@ -249,52 +252,52 @@ const Index = () => {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-16 md:py-24 bg-gray-50">
+      <section id="pricing" className="py-12 sm:py-16 lg:py-24 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
             Transparent & Affordable
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 mb-12 md:mb-16">
+          <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-8 sm:mb-12 lg:mb-16">
             No hidden fees.
           </p>
           
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto">
             <Card className="border-0 shadow-lg bg-white">
-              <CardContent className="p-6 md:p-8">
-                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4">Monthly</h3>
-                <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">$29.99</div>
-                <div className="space-y-3 text-left mb-6 md:mb-8">
+              <CardContent className="p-4 sm:p-6 lg:p-8">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Monthly</h3>
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">$29.99</div>
+                <div className="space-y-2 sm:space-y-3 text-left mb-4 sm:mb-6 lg:mb-8">
                   <div className="flex items-center">
-                    <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-gray-900 mr-2 md:mr-3 flex-shrink-0" />
-                    <span className="text-gray-600 text-sm md:text-base">AI Business Assistant</span>
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-gray-900 mr-2 sm:mr-3 flex-shrink-0" />
+                    <span className="text-gray-600 text-xs sm:text-sm lg:text-base">AI Business Assistant</span>
                   </div>
                   <div className="flex items-center">
-                    <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-gray-900 mr-2 md:mr-3 flex-shrink-0" />
-                    <span className="text-gray-600 text-sm md:text-base">Catalog Builder</span>
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-gray-900 mr-2 sm:mr-3 flex-shrink-0" />
+                    <span className="text-gray-600 text-xs sm:text-sm lg:text-base">Catalog Builder</span>
                   </div>
                   <div className="flex items-center">
-                    <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-gray-900 mr-2 md:mr-3 flex-shrink-0" />
-                    <span className="text-gray-600 text-sm md:text-base">Payment Integration</span>
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-gray-900 mr-2 sm:mr-3 flex-shrink-0" />
+                    <span className="text-gray-600 text-xs sm:text-sm lg:text-base">Payment Integration</span>
                   </div>
                   <div className="flex items-center">
-                    <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-gray-900 mr-2 md:mr-3 flex-shrink-0" />
-                    <span className="text-gray-600 text-sm md:text-base">CRM & Analytics</span>
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-gray-900 mr-2 sm:mr-3 flex-shrink-0" />
+                    <span className="text-gray-600 text-xs sm:text-sm lg:text-base">CRM & Analytics</span>
                   </div>
                 </div>
-                <Button className="w-full bg-gray-900 hover:bg-gray-800 text-white rounded-lg h-10 md:h-12">
+                <Button className="w-full bg-gray-900 hover:bg-gray-800 text-white rounded-lg h-10 sm:h-12 text-sm sm:text-base">
                   Start Now
                 </Button>
               </CardContent>
             </Card>
             
             <Card className="border-0 shadow-lg bg-white">
-              <CardContent className="p-6 md:p-8">
-                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4">Scale</h3>
-                <div className="text-xl md:text-2xl font-bold text-gray-900 mb-6">Pay as you grow</div>
-                <p className="text-gray-600 mb-6 md:mb-8 text-sm md:text-base">
+              <CardContent className="p-4 sm:p-6 lg:p-8">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Scale</h3>
+                <div className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">Pay as you grow</div>
+                <p className="text-gray-600 mb-4 sm:mb-6 lg:mb-8 text-xs sm:text-sm lg:text-base">
                   Perfect for growing businesses. Only pay for additional WhatsApp messaging costs as your customer base expands.
                 </p>
-                <Button variant="outline" className="w-full border-gray-300 text-gray-900 hover:bg-gray-50 rounded-lg h-10 md:h-12">
+                <Button variant="outline" className="w-full border-gray-300 text-gray-900 hover:bg-gray-50 rounded-lg h-10 sm:h-12 text-sm sm:text-base">
                   Contact Sales
                 </Button>
               </CardContent>
@@ -304,7 +307,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-12 sm:py-16 lg:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Carousel
             opts={{
@@ -316,11 +319,11 @@ const Index = () => {
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index}>
-                  <div className="text-center">
-                    <blockquote className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium text-gray-900 mb-6 md:mb-8 leading-relaxed">
+                  <div className="text-center px-2 sm:px-4">
+                    <blockquote className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-medium text-gray-900 mb-4 sm:mb-6 lg:mb-8 leading-relaxed">
                       "{testimonial.quote}"
                     </blockquote>
-                    <div className="text-base md:text-lg text-gray-600">
+                    <div className="text-sm sm:text-base lg:text-lg text-gray-600">
                       <div className="font-semibold">{testimonial.name}</div>
                       <div>{testimonial.title}</div>
                     </div>
@@ -328,23 +331,23 @@ const Index = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-4 md:-left-12" />
-            <CarouselNext className="right-4 md:-right-12" />
+            <CarouselPrevious className="left-2 sm:left-4 lg:-left-12" />
+            <CarouselNext className="right-2 sm:right-4 lg:-right-12" />
           </Carousel>
         </div>
       </section>
 
       {/* Footer */}
-      <footer id="contact" className="py-8 md:py-12 border-t border-gray-200 bg-white">
+      <footer id="contact" className="py-6 sm:py-8 lg:py-12 border-t border-gray-200 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex items-center">
-              <div className="w-6 h-6 md:w-8 md:h-8 bg-gradient-to-br from-gray-900 to-gray-700 rounded-lg flex items-center justify-center">
-                <MessageCircle className="w-3 h-3 md:w-5 md:h-5 text-white" />
+              <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-br from-gray-900 to-gray-700 rounded-lg flex items-center justify-center">
+                <MessageCircle className="w-3 h-3 sm:w-5 sm:h-5 text-white" />
               </div>
-              <span className="ml-2 md:ml-3 text-lg md:text-xl font-bold text-gray-900">Clapp</span>
+              <span className="ml-2 sm:ml-3 text-base sm:text-lg lg:text-xl font-bold text-gray-900">Clapp</span>
             </div>
-            <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 text-sm md:text-base">
+            <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 lg:gap-8 text-xs sm:text-sm lg:text-base">
               <a href="#" className="text-gray-600 hover:text-gray-900">Home</a>
               <a href="#pricing" className="text-gray-600 hover:text-gray-900">Pricing</a>
               <a href="#" className="text-gray-600 hover:text-gray-900">Book Demo</a>
