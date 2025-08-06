@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { MessageCircle, Square, Circle, Triangle, CheckCircle, Menu, X } from 'lucide-react';
+import { MessageCircle, Square, Circle, Triangle, CheckCircle, Menu, X, Instagram } from 'lucide-react';
 import WhatsAppDemo from "@/components/WhatsAppDemo";
 
 const Index = () => {
@@ -52,7 +52,6 @@ const Index = () => {
             <div className="hidden md:flex items-center space-x-8">
               <a href="#features" className="text-gray-600 hover:text-gray-900 transition-colors">Features</a>
               <a href="#pricing" className="text-gray-600 hover:text-gray-900 transition-colors">Pricing</a>
-              <a href="#contact" className="text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
               <a
                 href="https://wa.me/14707342241?text=Book%20demo."
                 target="_blank"
@@ -70,7 +69,6 @@ const Index = () => {
               <div className="flex flex-col space-y-4">
                 <a href="#features" className="text-gray-600 hover:text-gray-900 transition-colors px-4 py-2" onClick={() => setMobileMenuOpen(false)}>Features</a>
                 <a href="#pricing" className="text-gray-600 hover:text-gray-900 transition-colors px-4 py-2" onClick={() => setMobileMenuOpen(false)}>Pricing</a>
-                <a href="#contact" className="text-gray-600 hover:text-gray-900 transition-colors px-4 py-2" onClick={() => setMobileMenuOpen(false)}>Contact</a>
                 <a
                   href="https://wa.me/14707342241?text=Book%20demo."
                   target="_blank"
@@ -220,9 +218,18 @@ const Index = () => {
                 Your AI assistant handles product catalogs, processes orders, manages payments, and tracks deliveries. No manual work required from your end.
               </p>
               <div className="space-y-2 sm:space-y-3 lg:space-y-4">
-                <div className="font-semibold text-gray-900 text-sm sm:text-base">• Catalog Management</div>
-                <div className="font-semibold text-gray-900 text-sm sm:text-base">• Order Processing</div>
-                <div className="font-semibold text-gray-900 text-sm sm:text-base">• Payment Integration</div>
+                <div className="flex items-start">
+                  <div className="w-3 h-3 bg-gray-900 rounded-full mr-2 sm:mr-3 mt-1.5 flex-shrink-0"></div>
+                  <span className="font-semibold text-gray-900 text-sm sm:text-base">Catalog Management</span>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-3 h-3 bg-gray-900 rounded-full mr-2 sm:mr-3 mt-1.5 flex-shrink-0"></div>
+                  <span className="font-semibold text-gray-900 text-sm sm:text-base">Order Processing</span>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-3 h-3 bg-gray-900 rounded-full mr-2 sm:mr-3 mt-1.5 flex-shrink-0"></div>
+                  <span className="font-semibold text-gray-900 text-sm sm:text-base">Payment Integration</span>
+                </div>
               </div>
             </div>
           </div>
@@ -297,9 +304,6 @@ const Index = () => {
                 <p className="text-gray-600 mb-4 sm:mb-6 lg:mb-8 text-xs sm:text-sm lg:text-base">
                   Perfect for growing businesses. Only pay for additional WhatsApp messaging costs as your customer base expands.
                 </p>
-                <Button variant="outline" className="w-full border-gray-300 text-gray-900 hover:bg-gray-50 rounded-lg h-10 sm:h-12 text-sm sm:text-base">
-                  Contact Sales
-                </Button>
               </CardContent>
             </Card>
           </div>
@@ -338,7 +342,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer id="contact" className="py-6 sm:py-8 lg:py-12 border-t border-gray-200 bg-white">
+      <footer className="py-6 sm:py-8 lg:py-12 border-t border-gray-200 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex items-center">
@@ -352,8 +356,16 @@ const Index = () => {
               <a href="#pricing" className="text-gray-600 hover:text-gray-900">Pricing</a>
               <a href="#" className="text-gray-600 hover:text-gray-900">Book Demo</a>
               <a href="#" className="text-gray-600 hover:text-gray-900">FAQ</a>
-              <a href="#contact" className="text-gray-600 hover:text-gray-900">Contact</a>
               <a href="#" className="text-gray-600 hover:text-gray-900">WhatsApp</a>
+              <a
+                href="https://www.instagram.com/just_clapp/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-gray-900 flex items-center"
+              >
+                <Instagram className="w-4 h-4 sm:w-5 sm:h-5 mr-1" />
+                Instagram
+              </a>
             </div>
           </div>
         </div>
