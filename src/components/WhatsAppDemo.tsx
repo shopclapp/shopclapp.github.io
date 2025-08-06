@@ -1,3 +1,4 @@
+
 import { useState, useEffect, useRef } from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -118,23 +119,18 @@ const WhatsAppDemo = () => {
   const chatEndRef = useRef<HTMLDivElement>(null);
   const chatContainerRef = useRef<HTMLDivElement>(null);
 
-  // Fixed scroll behavior - only scroll within the chat container
+  // Smooth scroll within container only - prevent page movement
   useEffect(() => {
     if (chatContainerRef.current && chatEndRef.current) {
       const container = chatContainerRef.current;
-      const chatEnd = chatEndRef.current;
       
-      // Scroll within the container only
-      const containerRect = container.getBoundingClientRect();
-      const chatEndRect = chatEnd.getBoundingClientRect();
+      // Use scrollTop instead of scrollIntoView to prevent page movement
+      const scrollToBottom = () => {
+        container.scrollTop = container.scrollHeight;
+      };
       
-      if (chatEndRect.bottom > containerRect.bottom || chatEndRect.top < containerRect.top) {
-        chatEnd.scrollIntoView({ 
-          behavior: 'smooth', 
-          block: 'end',
-          inline: 'nearest'
-        });
-      }
+      // Use requestAnimationFrame for smooth scrolling
+      requestAnimationFrame(scrollToBottom);
     }
   }, [messages, isTyping]);
 
@@ -194,8 +190,7 @@ const WhatsAppDemo = () => {
       <CardContent className="p-0">
         <div 
           ref={chatContainerRef}
-          className="h-[28rem] overflow-y-auto p-4 bg-gray-50 scroll-smooth"
-          style={{ scrollBehavior: 'smooth' }}
+          className="h-[28rem] overflow-y-auto p-4 bg-gray-50"
         >
           {messages.map((message) => (
             <div key={message.id} className={`flex ${message.type === 'bot' ? 'justify-start' : 'justify-end'} mb-3`}>
