@@ -318,8 +318,8 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto">
             <Card className="border-0 shadow-lg bg-white">
               <CardContent className="p-4 sm:p-6 lg:p-8">
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Monthly</h3>
-                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">$29.99</div>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Only</h3>
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">$29.99/m</div>
                 <div className="space-y-2 sm:space-y-3 text-left mb-4 sm:mb-6 lg:mb-8">
                   <div className="flex items-center">
                     <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-gray-900 mr-2 sm:mr-3 flex-shrink-0" />
@@ -331,7 +331,7 @@ const Index = () => {
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-gray-900 mr-2 sm:mr-3 flex-shrink-0" />
-                    <span className="text-gray-600 text-xs sm:text-sm lg:text-base">Payment Integration</span>
+                    <span className="text-gray-600 text-xs sm:text-sm lg:text-base">Payment and Ops Integration</span>
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-gray-900 mr-2 sm:mr-3 flex-shrink-0" />
@@ -346,10 +346,10 @@ const Index = () => {
             
             <Card className="border-0 shadow-lg bg-white">
               <CardContent className="p-4 sm:p-6 lg:p-8">
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Scale</h3>
-                <div className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">Pay as you grow</div>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">+</h3>
+                <div className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">Pay as you scale</div>
                 <p className="text-gray-600 mb-4 sm:mb-6 lg:mb-8 text-xs sm:text-sm lg:text-base">
-                  Perfect for growing businesses. Only pay for additional WhatsApp messaging costs as your customer base expands.
+                  Perfect for growing businesses. Only pay for additional WhatsApp messaging costs as your customers grow.
                 </p>
               </CardContent>
             </Card>
@@ -399,11 +399,8 @@ const Index = () => {
               <span className="ml-2 sm:ml-3 text-base sm:text-lg lg:text-xl font-bold text-gray-900">Clapp</span>
             </div>
             <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 lg:gap-8 text-xs sm:text-sm lg:text-base">
-              <a href="#" className="text-gray-600 hover:text-gray-900">Home</a>
               <a href="#pricing" className="text-gray-600 hover:text-gray-900">Pricing</a>
               <a href="#" className="text-gray-600 hover:text-gray-900">Book Demo</a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">FAQ</a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">WhatsApp</a>
               <a
                 href="https://www.instagram.com/just_clapp/"
                 target="_blank"
