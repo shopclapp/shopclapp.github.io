@@ -131,50 +131,47 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Enhanced Minimal Brands Section */}
-      <section className="py-8 sm:py-12 lg:py-16 bg-gradient-to-r from-gray-50 to-gray-100 border-t border-gray-200">
+      {/* Brands Scrolling Section */}
+      <section className="py-8 sm:py-12 lg:py-16 bg-gray-50 border-t border-gray-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-6 sm:mb-8 lg:mb-12">
-            <p className="text-sm sm:text-base lg:text-lg text-gray-700 font-semibold mb-2">
+            <p className="text-sm sm:text-base lg:text-lg text-gray-600 font-medium">
               Trusted by growing businesses
             </p>
-            <div className="flex justify-center items-center space-x-2">
-              <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
-              <div className="w-8 h-0.5 bg-gray-300"></div>
-              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-            </div>
           </div>
           
-          <div className="relative overflow-hidden">
+          <div className="relative overflow-hidden bg-white rounded-2xl border border-emerald-100 shadow-sm p-6 sm:p-8">
             <div className="flex animate-scroll">
+              {/* First set of brands */}
               {brands.map((brand, index) => (
                 <div
                   key={`first-${index}`}
                   className="flex-shrink-0 mx-6 sm:mx-8 lg:mx-12 text-center"
                 >
-                  <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-4 sm:p-6 lg:p-8 border-l-4 border-emerald-500">
-                    <span className="text-lg sm:text-xl lg:text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
-                      {brand}
-                    </span>
-                  </div>
+                  <span className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 hover:text-emerald-600 transition-colors">
+                    {brand}
+                  </span>
                 </div>
               ))}
+              {/* Duplicate set for seamless scrolling */}
               {brands.map((brand, index) => (
                 <div
                   key={`second-${index}`}
                   className="flex-shrink-0 mx-6 sm:mx-8 lg:mx-12 text-center"
                 >
-                  <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-4 sm:p-6 lg:p-8 border-l-4 border-emerald-500">
-                    <span className="text-lg sm:text-xl lg:text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
-                      {brand}
-                    </span>
-                  </div>
+                  <span className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 hover:text-emerald-600 transition-colors">
+                    {brand}
+                  </span>
                 </div>
               ))}
             </div>
+            
+            {/* Subtle emerald accent line */}
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-emerald-400 to-blue-500 rounded-full"></div>
           </div>
         </div>
       </section>
+
 
       {/* Feature Showcase Section */}
       <section id="features" className="py-12 sm:py-16 lg:py-20 bg-white">
