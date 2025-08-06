@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -25,6 +24,12 @@ const Index = () => {
       name: "Sanil",
       title: "Founder, Organics and You"
     }
+  ];
+
+  const brands = [
+    "Organics and You",
+    "Delhi Spice Co.",
+    "Desify"
   ];
 
   return (
@@ -306,6 +311,44 @@ const Index = () => {
                 </p>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Brands Scrolling Section */}
+      <section className="py-8 sm:py-12 lg:py-16 bg-gray-50 border-t border-gray-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-6 sm:mb-8 lg:mb-12">
+            <p className="text-sm sm:text-base lg:text-lg text-gray-600 font-medium">
+              Trusted by growing businesses
+            </p>
+          </div>
+          
+          <div className="relative overflow-hidden">
+            <div className="flex animate-scroll">
+              {/* First set of brands */}
+              {brands.map((brand, index) => (
+                <div
+                  key={`first-${index}`}
+                  className="flex-shrink-0 mx-6 sm:mx-8 lg:mx-12 text-center"
+                >
+                  <span className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">
+                    {brand}
+                  </span>
+                </div>
+              ))}
+              {/* Duplicate set for seamless scrolling */}
+              {brands.map((brand, index) => (
+                <div
+                  key={`second-${index}`}
+                  className="flex-shrink-0 mx-6 sm:mx-8 lg:mx-12 text-center"
+                >
+                  <span className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">
+                    {brand}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
