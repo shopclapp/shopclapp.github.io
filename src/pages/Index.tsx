@@ -131,8 +131,46 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Brands Scrolling Section */}
+      <section className="py-8 sm:py-12 lg:py-16 bg-gray-50 border-t border-gray-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-6 sm:mb-8 lg:mb-12">
+            <p className="text-sm sm:text-base lg:text-lg text-gray-600 font-medium">
+              Trusted by growing businesses
+            </p>
+          </div>
+          
+          <div className="relative overflow-hidden">
+            <div className="flex animate-scroll">
+              {/* First set of brands */}
+              {brands.map((brand, index) => (
+                <div
+                  key={`first-${index}`}
+                  className="flex-shrink-0 mx-6 sm:mx-8 lg:mx-12 text-center"
+                >
+                  <span className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">
+                    {brand}
+                  </span>
+                </div>
+              ))}
+              {/* Duplicate set for seamless scrolling */}
+              {brands.map((brand, index) => (
+                <div
+                  key={`second-${index}`}
+                  className="flex-shrink-0 mx-6 sm:mx-8 lg:mx-12 text-center"
+                >
+                  <span className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">
+                    {brand}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Feature Showcase Section */}
-      <section id="features" className="py-12 sm:py-16 lg:py-20 bg-gray-50">
+      <section id="features" className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-12 lg:mb-16">
             <div className="text-center">
@@ -184,7 +222,7 @@ const Index = () => {
       </section>
 
       {/* Detailed Features Section */}
-      <section className="py-12 sm:py-16 lg:py-24 bg-white">
+      <section className="py-12 sm:py-16 lg:py-24 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Feature 1 */}
           <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-center mb-12 sm:mb-16 lg:mb-24">
@@ -210,12 +248,12 @@ const Index = () => {
 
           {/* Feature 2 */}
           <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-center mb-12 sm:mb-16 lg:mb-24">
-            <div className="flex justify-center order-2 lg:order-1">
+            <div className="flex justify-center order-1 lg:order-1">
               <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 bg-gray-100 rounded-3xl flex items-center justify-center">
                 <Circle className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 text-gray-400" />
               </div>
             </div>
-            <div className="order-1 lg:order-2">
+            <div className="order-2 lg:order-2">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 lg:mb-6">
                 Complete Commerce Automation
               </h2>
@@ -264,7 +302,7 @@ const Index = () => {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-12 sm:py-16 lg:py-24 bg-gray-50">
+      <section id="pricing" className="py-12 sm:py-16 lg:py-24 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
             Transparent & Affordable
@@ -311,44 +349,6 @@ const Index = () => {
                 </p>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Brands Scrolling Section */}
-      <section className="py-8 sm:py-12 lg:py-16 bg-gray-50 border-t border-gray-200">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-6 sm:mb-8 lg:mb-12">
-            <p className="text-sm sm:text-base lg:text-lg text-gray-600 font-medium">
-              Trusted by growing businesses
-            </p>
-          </div>
-          
-          <div className="relative overflow-hidden">
-            <div className="flex animate-scroll">
-              {/* First set of brands */}
-              {brands.map((brand, index) => (
-                <div
-                  key={`first-${index}`}
-                  className="flex-shrink-0 mx-6 sm:mx-8 lg:mx-12 text-center"
-                >
-                  <span className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">
-                    {brand}
-                  </span>
-                </div>
-              ))}
-              {/* Duplicate set for seamless scrolling */}
-              {brands.map((brand, index) => (
-                <div
-                  key={`second-${index}`}
-                  className="flex-shrink-0 mx-6 sm:mx-8 lg:mx-12 text-center"
-                >
-                  <span className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">
-                    {brand}
-                  </span>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
