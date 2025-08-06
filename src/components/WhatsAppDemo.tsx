@@ -176,7 +176,7 @@ const WhatsAppDemo = () => {
               <span className="text-2xl">🤖</span>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-900">Clapp AI Assistant</h3>
+              <h3 className="font-semibold text-gray-900">Clapp AI Agent</h3>
               <p className="text-xs text-gray-600 flex items-center">
                 <span className="w-2 h-2 bg-green-500 rounded-full mr-1.5"></span>
                 online
