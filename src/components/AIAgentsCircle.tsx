@@ -14,16 +14,9 @@ const AIAgentsCircle = () => {
 
   return (
     <div className="relative w-80 h-80 mx-auto my-8">
-      {/* Central AI Core */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-        <div className="w-20 h-20 bg-gradient-to-br from-gray-900 to-gray-700 rounded-full flex items-center justify-center shadow-lg">
-          <Bot className="w-10 h-10 text-white" />
-        </div>
-        <div className="text-center mt-2">
-          <span className="text-sm font-semibold text-gray-900">AI Core</span>
-        </div>
-      </div>
-
+      {/* Animated Ring - positioned behind everything */}
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border-2 border-dashed border-gray-300 rounded-full animate-spin opacity-30" style={{ animationDuration: '20s' }}></div>
+      
       {/* Agent Circles */}
       {agents.map((agent, index) => {
         const angle = (index * 2 * Math.PI) / agents.length - Math.PI / 2;
@@ -40,32 +33,40 @@ const AIAgentsCircle = () => {
               top: `calc(50% + ${y}px)`,
             }}
           >
-            {/* Connection Line */}
+            {/* Connection Line from agent to center */}
             <div
-              className="absolute w-px h-20 bg-gradient-to-b from-gray-300 to-transparent origin-bottom z-0"
+              className="absolute w-0.5 bg-gradient-to-b from-gray-400 to-transparent z-0"
               style={{
-                transform: `rotate(${angle + Math.PI / 2}rad)`,
+                height: `${radius - 40}px`,
                 left: '50%',
                 top: '50%',
-                transformOrigin: 'center bottom',
+                transform: `rotate(${angle + Math.PI}rad)`,
+                transformOrigin: 'top center',
               }}
             />
             
             {/* Agent Circle */}
-            <div className={`w-16 h-16 bg-gradient-to-br ${agent.color} rounded-full flex items-center justify-center shadow-md hover:shadow-lg transition-shadow duration-300 relative z-10`}>
+            <div className={`relative z-10 w-16 h-16 bg-gradient-to-br ${agent.color} rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 cursor-pointer`}>
               <agent.icon className="w-8 h-8 text-white" />
             </div>
             
             {/* Agent Label */}
-            <div className="text-center mt-2 w-20">
-              <span className="text-xs font-medium text-gray-700 leading-tight">{agent.name} Agent</span>
+            <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 text-center">
+              <span className="text-xs font-medium text-gray-700 whitespace-nowrap">{agent.name} Agent</span>
             </div>
           </div>
         );
       })}
 
-      {/* Animated Ring */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border-2 border-dashed border-gray-300 rounded-full animate-spin" style={{ animationDuration: '20s' }}></div>
+      {/* Central AI Core - positioned on top */}
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+        <div className="w-20 h-20 bg-gradient-to-br from-gray-900 to-gray-700 rounded-full flex items-center justify-center shadow-xl border-4 border-white">
+          <Bot className="w-10 h-10 text-white" />
+        </div>
+        <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 text-center">
+          <span className="text-sm font-semibold text-gray-900 whitespace-nowrap">AI Core</span>
+        </div>
+      </div>
     </div>
   );
 };
