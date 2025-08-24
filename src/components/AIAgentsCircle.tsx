@@ -32,7 +32,7 @@ const AIAgentsCircle = () => {
           >
             {/* Connection Line from agent to center */}
             <div
-              className="absolute w-0.5 bg-gradient-to-b from-gray-400 to-transparent z-0"
+              className="absolute w-0.5 bg-gradient-to-b from-white-400 to-transparent z-0"
               style={{
                 height: `${radius - 40}px`,
                 left: '50%',
