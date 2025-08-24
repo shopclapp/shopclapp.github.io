@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { MessageCircle, Square, Circle, Triangle, CheckCircle, Menu, X, Instagram } from 'lucide-react';
 import WhatsAppDemo from "@/components/WhatsAppDemo";
+import AIAgentsCircle from "@/components/AIAgentsCircle";
 
 const Index = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -322,36 +323,10 @@ const Index = () => {
                   <span className="text-lg sm:text-xl text-gray-400 line-through mr-2">$49.99/m</span>
                   <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">$29.99/m</span>
                 </div>
-                <div className="space-y-2 sm:space-y-3 text-left mb-4 sm:mb-6 lg:mb-8">
-                  <div className="flex items-center">
-                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-gray-900 mr-2 sm:mr-3 flex-shrink-0" />
-                    <span className="text-gray-600 text-xs sm:text-sm lg:text-base">Payment AI Agent</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-gray-900 mr-2 sm:mr-3 flex-shrink-0" />
-                    <span className="text-gray-600 text-xs sm:text-sm lg:text-base">Logistics AI Agent</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-gray-900 mr-2 sm:mr-3 flex-shrink-0" />
-                    <span className="text-gray-600 text-xs sm:text-sm lg:text-base">Support AI Agent</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-gray-900 mr-2 sm:mr-3 flex-shrink-0" />
-                    <span className="text-gray-600 text-xs sm:text-sm lg:text-base">Marketing AI Agent</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-gray-900 mr-2 sm:mr-3 flex-shrink-0" />
-                    <span className="text-gray-600 text-xs sm:text-sm lg:text-base">Sales AI Agent</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-gray-900 mr-2 sm:mr-3 flex-shrink-0" />
-                    <span className="text-gray-600 text-xs sm:text-sm lg:text-base">Insights AI Agent</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-gray-900 mr-2 sm:mr-3 flex-shrink-0" />
-                    <span className="text-gray-600 text-xs sm:text-sm lg:text-base">Retention AI Agent</span>
-                  </div>
-                </div>
+                
+                {/* AI Agents Circle */}
+                <AIAgentsCircle />
+                
                 <a
                   href="https://buy.stripe.com/00w6oHdFQbMPaW11svcbC07"
                   target="_blank"
