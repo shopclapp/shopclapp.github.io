@@ -14,9 +14,6 @@ const AIAgentsCircle = () => {
 
   return (
     <div className="relative w-80 h-80 mx-auto my-8">
-      {/* Animated Ring - positioned behind everything */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border-2 border-dashed border-gray-300 rounded-full animate-spin opacity-30" style={{ animationDuration: '20s' }}></div>
-      
       {/* Agent Circles */}
       {agents.map((agent, index) => {
         const angle = (index * 2 * Math.PI) / agents.length - Math.PI / 2;
