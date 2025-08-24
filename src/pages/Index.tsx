@@ -107,7 +107,7 @@ const Index = () => {
               </h1>
               
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mb-6 sm:mb-8 lg:mb-12 max-w-2xl mx-auto lg:mx-0">
-                Run your entire business on WhatsApp!
+                Run your entire business on WhatsApp with Zero Team!
               </p>
               
               <a
@@ -171,7 +171,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
 
       {/* Feature Showcase Section */}
       <section id="features" className="py-12 sm:py-16 lg:py-20 bg-white">
@@ -319,28 +318,49 @@ const Index = () => {
             <Card className="border-0 shadow-lg bg-white">
               <CardContent className="p-4 sm:p-6 lg:p-8">
                 <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Only</h3>
-                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">$29.99/m</div>
+                <div className="mb-4 sm:mb-6">
+                  <span className="text-lg sm:text-xl text-gray-400 line-through mr-2">$49.99/m</span>
+                  <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">$29.99/m</span>
+                </div>
                 <div className="space-y-2 sm:space-y-3 text-left mb-4 sm:mb-6 lg:mb-8">
                   <div className="flex items-center">
                     <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-gray-900 mr-2 sm:mr-3 flex-shrink-0" />
-                    <span className="text-gray-600 text-xs sm:text-sm lg:text-base">AI Business Assistant</span>
+                    <span className="text-gray-600 text-xs sm:text-sm lg:text-base">Payment AI Agent</span>
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-gray-900 mr-2 sm:mr-3 flex-shrink-0" />
-                    <span className="text-gray-600 text-xs sm:text-sm lg:text-base">Catalog Builder</span>
+                    <span className="text-gray-600 text-xs sm:text-sm lg:text-base">Logistics AI Agent</span>
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-gray-900 mr-2 sm:mr-3 flex-shrink-0" />
-                    <span className="text-gray-600 text-xs sm:text-sm lg:text-base">Payment and Ops Integration</span>
+                    <span className="text-gray-600 text-xs sm:text-sm lg:text-base">Support AI Agent</span>
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-gray-900 mr-2 sm:mr-3 flex-shrink-0" />
-                    <span className="text-gray-600 text-xs sm:text-sm lg:text-base">CRM & Analytics</span>
+                    <span className="text-gray-600 text-xs sm:text-sm lg:text-base">Marketing AI Agent</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-gray-900 mr-2 sm:mr-3 flex-shrink-0" />
+                    <span className="text-gray-600 text-xs sm:text-sm lg:text-base">Sales AI Agent</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-gray-900 mr-2 sm:mr-3 flex-shrink-0" />
+                    <span className="text-gray-600 text-xs sm:text-sm lg:text-base">Insights AI Agent</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-gray-900 mr-2 sm:mr-3 flex-shrink-0" />
+                    <span className="text-gray-600 text-xs sm:text-sm lg:text-base">Retention AI Agent</span>
                   </div>
                 </div>
-                <Button className="w-full bg-gray-900 hover:bg-gray-800 text-white rounded-lg h-10 sm:h-12 text-sm sm:text-base">
-                  Start Now
-                </Button>
+                <a
+                  href="https://buy.stripe.com/00w6oHdFQbMPaW11svcbC07"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-gray-900 hover:bg-gray-800 text-white rounded-lg h-10 sm:h-12 text-sm sm:text-base flex items-center justify-center"
+                  style={{ textDecoration: 'none' }}
+                >
+                  Enable Now
+                </a>
               </CardContent>
             </Card>
             
