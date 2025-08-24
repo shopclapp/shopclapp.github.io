@@ -61,7 +61,7 @@ const AIAgentsCircle = () => {
           <Bot className="w-10 h-10 text-white" />
         </div>
         <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 text-center">
-          <span className="text-sm font-semibold text-gray-900 whitespace-nowrap">AI Core</span>
+          <span className="text-sm font-semibold text-gray-900 whitespace-nowrap">Clapp AI</span>
         </div>
       </div>
     </div>
