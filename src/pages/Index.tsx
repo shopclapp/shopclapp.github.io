@@ -1,9 +1,8 @@
-
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { MessageCircle, Square, Circle, Triangle, CheckCircle, Menu, X, Instagram, CreditCard, Truck, HeadphonesIcon, Megaphone, TrendingUp, BarChart3, Heart } from 'lucide-react';
+import { MessageCircle, Square, Circle, Triangle, CheckCircle, Menu, X, Instagram } from 'lucide-react';
 import WhatsAppDemo from "@/components/WhatsAppDemo";
 
 const Index = () => {
@@ -31,44 +30,6 @@ const Index = () => {
     "Organics and You",
     "Delhi Spice Co.",
     "Desify"
-  ];
-
-  const aiAgents = [
-    {
-      name: "Payment AI Agent",
-      icon: CreditCard,
-      color: "bg-emerald-100 text-emerald-600"
-    },
-    {
-      name: "Logistics AI Agent",
-      icon: Truck,
-      color: "bg-blue-100 text-blue-600"
-    },
-    {
-      name: "Support AI Agent",
-      icon: HeadphonesIcon,
-      color: "bg-purple-100 text-purple-600"
-    },
-    {
-      name: "Marketing AI Agent",
-      icon: Megaphone,
-      color: "bg-orange-100 text-orange-600"
-    },
-    {
-      name: "Sales AI Agent",
-      icon: TrendingUp,
-      color: "bg-red-100 text-red-600"
-    },
-    {
-      name: "Insights AI Agent",
-      icon: BarChart3,
-      color: "bg-indigo-100 text-indigo-600"
-    },
-    {
-      name: "Retention AI Agent",
-      icon: Heart,
-      color: "bg-pink-100 text-pink-600"
-    }
   ];
 
   return (
@@ -361,22 +322,36 @@ const Index = () => {
                   <span className="text-lg sm:text-xl text-gray-400 line-through mr-2">$49.99/m</span>
                   <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">$29.99/m</span>
                 </div>
-                
-                {/* AI Agents Grid */}
-                <div className="grid grid-cols-1 gap-3 mb-4 sm:mb-6 lg:mb-8">
-                  {aiAgents.map((agent, index) => {
-                    const IconComponent = agent.icon;
-                    return (
-                      <div key={index} className="flex items-center p-3 rounded-lg border border-gray-100 bg-gray-50/50 hover:bg-gray-50 transition-colors">
-                        <div className={`w-8 h-8 rounded-full ${agent.color} flex items-center justify-center mr-3 flex-shrink-0`}>
-                          <IconComponent className="w-4 h-4" />
-                        </div>
-                        <span className="text-gray-900 text-sm font-medium">{agent.name}</span>
-                      </div>
-                    );
-                  })}
+                <div className="space-y-2 sm:space-y-3 text-left mb-4 sm:mb-6 lg:mb-8">
+                  <div className="flex items-center">
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-gray-900 mr-2 sm:mr-3 flex-shrink-0" />
+                    <span className="text-gray-600 text-xs sm:text-sm lg:text-base">Payment AI Agent</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-gray-900 mr-2 sm:mr-3 flex-shrink-0" />
+                    <span className="text-gray-600 text-xs sm:text-sm lg:text-base">Logistics AI Agent</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-gray-900 mr-2 sm:mr-3 flex-shrink-0" />
+                    <span className="text-gray-600 text-xs sm:text-sm lg:text-base">Support AI Agent</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-gray-900 mr-2 sm:mr-3 flex-shrink-0" />
+                    <span className="text-gray-600 text-xs sm:text-sm lg:text-base">Marketing AI Agent</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-gray-900 mr-2 sm:mr-3 flex-shrink-0" />
+                    <span className="text-gray-600 text-xs sm:text-sm lg:text-base">Sales AI Agent</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-gray-900 mr-2 sm:mr-3 flex-shrink-0" />
+                    <span className="text-gray-600 text-xs sm:text-sm lg:text-base">Insights AI Agent</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-gray-900 mr-2 sm:mr-3 flex-shrink-0" />
+                    <span className="text-gray-600 text-xs sm:text-sm lg:text-base">Retention AI Agent</span>
+                  </div>
                 </div>
-                
                 <a
                   href="https://buy.stripe.com/00w6oHdFQbMPaW11svcbC07"
                   target="_blank"
