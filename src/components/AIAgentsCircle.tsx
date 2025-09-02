@@ -13,11 +13,11 @@ const AIAgentsCircle = () => {
   ];
 
   return (
-    <div className="relative w-80 h-80 mx-auto my-8">
+    <div className="relative w-64 h-64 mx-auto my-6">
       {/* Agent Circles */}
       {agents.map((agent, index) => {
         const angle = (index * 2 * Math.PI) / agents.length - Math.PI / 2;
-        const radius = 120;
+        const radius = 90;
         const x = Math.cos(angle) * radius;
         const y = Math.sin(angle) * radius;
 
@@ -32,9 +32,9 @@ const AIAgentsCircle = () => {
           >
             {/* Connection Line from agent to center */}
             <div
-              className="absolute w-0.5 bg-gradient-to-b from-white-400 to-transparent z-0"
+              className="absolute w-0.5 bg-gradient-to-b from-gray-300 to-transparent z-0"
               style={{
-                height: `${radius - 40}px`,
+                height: `${radius - 30}px`,
                 left: '50%',
                 top: '50%',
                 transform: `rotate(${angle + Math.PI}rad)`,
@@ -43,13 +43,13 @@ const AIAgentsCircle = () => {
             />
             
             {/* Agent Circle */}
-            <div className={`relative z-10 w-16 h-16 bg-gradient-to-br ${agent.color} rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 cursor-pointer`}>
-              <agent.icon className="w-8 h-8 text-white" />
+            <div className={`relative z-10 w-12 h-12 bg-gradient-to-br ${agent.color} rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 cursor-pointer`}>
+              <agent.icon className="w-6 h-6 text-white" />
             </div>
             
             {/* Agent Label */}
-            <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 text-center">
-              <span className="text-xs font-medium text-gray-700 whitespace-nowrap">{agent.name} Agent</span>
+            <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-1 text-center">
+              <span className="text-xs font-medium text-gray-700 whitespace-nowrap">{agent.name}</span>
             </div>
           </div>
         );
@@ -57,8 +57,8 @@ const AIAgentsCircle = () => {
 
       {/* Central AI Core - positioned on top */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-        <div className="w-20 h-20 bg-gradient-to-br from-gray-900 to-gray-700 rounded-full flex items-center justify-center shadow-xl border-4 border-white">
-          <Bot className="w-10 h-10 text-white" />
+        <div className="w-16 h-16 bg-gradient-to-br from-gray-900 to-gray-700 rounded-full flex items-center justify-center shadow-xl border-4 border-white">
+          <Bot className="w-8 h-8 text-white" />
         </div>
         <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 text-center">
           <span className="text-sm font-semibold text-gray-900 whitespace-nowrap">Clapp AI</span>
