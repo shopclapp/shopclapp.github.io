@@ -319,9 +319,13 @@ const Index = () => {
             <Card className="border-0 shadow-lg bg-white">
               <CardContent className="p-4 sm:p-6 lg:p-8">
                 <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Trial</h3>
-                <div className="mb-4 sm:mb-6">
-                  <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">Free</span>
+                <div className="mb-4 sm:mb-6 flex items-baseline justify-center">
+                  <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">$29.99</span>
+                  <span className="text-sm text-gray-500 ml-1">/one-time</span>
                 </div>
+                <p className="text-gray-600 mb-2 text-xs sm:text-sm lg:text-base">
+                  To cover setup cost and infrastructure.
+                </p>
                 <p className="text-gray-600 mb-4 sm:mb-6 lg:mb-8 text-xs sm:text-sm lg:text-base">
                   Try our platform risk-free and see the results for yourself.
                 </p>
@@ -329,7 +333,7 @@ const Index = () => {
                   href="https://buy.stripe.com/aFa9ATfNY2cfaW17QTcbC0b"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full bg-gray-200 hover:bg-gray-300 text-gray-900 rounded-lg h-10 sm:h-12 text-sm sm:text-base flex items-center justify-center transition-colors"
+                  className="w-full bg-gray-900 hover:bg-gray-800 text-white rounded-lg h-10 sm:h-12 text-sm sm:text-base flex items-center justify-center transition-colors"
                   style={{ textDecoration: 'none' }}
                 >
                   Start Trial
@@ -340,9 +344,10 @@ const Index = () => {
             <Card className="border-0 shadow-lg bg-white">
               <CardContent className="p-4 sm:p-6 lg:p-8">
                 <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Pro</h3>
-                <div className="mb-4 sm:mb-6">
-                  <span className="text-lg sm:text-xl text-gray-400 line-through mr-2">$99.99/m</span>
-                  <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">$79.99/m</span>
+                <div className="mb-4 sm:mb-6 flex items-baseline justify-center">
+                  <span className="text-lg sm:text-xl text-gray-400 line-through mr-2">$99.99</span>
+                  <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">$79.99</span>
+                  <span className="text-sm text-gray-500 ml-1">/m</span>
                 </div>
                 
                 {/* AI Agents Circle */}
