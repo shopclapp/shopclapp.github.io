@@ -328,7 +328,7 @@ const Index = () => {
                 <AIAgentsCircle />
                 
                 <a
-                  href="https://buy.stripe.com/00w6oHdFQbMPaW11svcbC07"
+                  href="https://buy.stripe.com/14A00jbxIeZ16FL2wzcbC09"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full bg-gray-900 hover:bg-gray-800 text-white rounded-lg h-10 sm:h-12 text-sm sm:text-base flex items-center justify-center"
