@@ -320,8 +320,8 @@ const Index = () => {
               <CardContent className="p-4 sm:p-6 lg:p-8">
                 <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Only</h3>
                 <div className="mb-4 sm:mb-6">
-                  <span className="text-lg sm:text-xl text-gray-400 line-through mr-2">$49.99/m</span>
-                  <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">$29.99/m</span>
+                  <span className="text-lg sm:text-xl text-gray-400 line-through mr-2">$99.99/m</span>
+                  <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">$79.99/m</span>
                 </div>
                 
                 {/* AI Agents Circle */}
