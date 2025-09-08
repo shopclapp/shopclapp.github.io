@@ -423,6 +423,8 @@ const Index = () => {
             <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 lg:gap-8 text-xs sm:text-sm lg:text-base">
               <a href="#pricing" className="text-gray-600 hover:text-gray-900">Pricing</a>
               <Link to="/privacy-policy" className="text-gray-600 hover:text-gray-900">Privacy Policy</Link>
+              <Link to="/data-security" className="text-gray-600 hover:text-gray-900">Data Security</Link>
+              <Link to="/support" className="text-gray-600 hover:text-gray-900">Support</Link>
               <a href="#" className="text-gray-600 hover:text-gray-900">Book Demo</a>
               <a
                 href="https://www.instagram.com/just_clapp/"
