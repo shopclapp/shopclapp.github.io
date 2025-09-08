@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -421,6 +422,7 @@ const Index = () => {
             </div>
             <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 lg:gap-8 text-xs sm:text-sm lg:text-base">
               <a href="#pricing" className="text-gray-600 hover:text-gray-900">Pricing</a>
+              <Link to="/privacy-policy" className="text-gray-600 hover:text-gray-900">Privacy Policy</Link>
               <a href="#" className="text-gray-600 hover:text-gray-900">Book Demo</a>
               <a
                 href="https://www.instagram.com/just_clapp/"
