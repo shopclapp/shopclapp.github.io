@@ -425,6 +425,7 @@ const Index = () => {
               <Link to="/privacy-policy" className="text-gray-600 hover:text-gray-900">Privacy Policy</Link>
               <Link to="/data-security" className="text-gray-600 hover:text-gray-900">Data Security</Link>
               <Link to="/support" className="text-gray-600 hover:text-gray-900">Support</Link>
+              <Link to="/partners" className="text-gray-600 hover:text-gray-900">Partners</Link>
               <a href="#" className="text-gray-600 hover:text-gray-900">Book Demo</a>
               <a
                 href="https://www.instagram.com/just_clapp/"
