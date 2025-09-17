@@ -59,6 +59,7 @@ const Index = () => {
             <div className="hidden md:flex items-center space-x-8">
               <a href="#features" className="text-gray-600 hover:text-gray-900 transition-colors">Features</a>
               <a href="#pricing" className="text-gray-600 hover:text-gray-900 transition-colors">Pricing</a>
+              <Link to="/shopify-integration" className="text-gray-600 hover:text-gray-900 transition-colors">Shopify</Link>
               <a
                 href="https://wa.me/14707342241?text=Book%20demo."
                 target="_blank"
@@ -76,6 +77,7 @@ const Index = () => {
               <div className="flex flex-col space-y-4">
                 <a href="#features" className="text-gray-600 hover:text-gray-900 transition-colors px-4 py-2" onClick={() => setMobileMenuOpen(false)}>Features</a>
                 <a href="#pricing" className="text-gray-600 hover:text-gray-900 transition-colors px-4 py-2" onClick={() => setMobileMenuOpen(false)}>Pricing</a>
+                <Link to="/shopify-integration" className="text-gray-600 hover:text-gray-900 transition-colors px-4 py-2" onClick={() => setMobileMenuOpen(false)}>Shopify</Link>
                 <a
                   href="https://wa.me/14707342241?text=Book%20demo."
                   target="_blank"
@@ -426,6 +428,7 @@ const Index = () => {
               <Link to="/data-security" className="text-gray-600 hover:text-gray-900">Data Security</Link>
               <Link to="/support" className="text-gray-600 hover:text-gray-900">Support</Link>
               <Link to="/partners" className="text-gray-600 hover:text-gray-900">Partners</Link>
+              <Link to="/shopify-integration" className="text-gray-600 hover:text-gray-900">Shopify Integration</Link>
               <a href="#" className="text-gray-600 hover:text-gray-900">Book Demo</a>
               <a
                 href="https://www.instagram.com/just_clapp/"
