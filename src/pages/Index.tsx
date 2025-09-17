@@ -321,7 +321,7 @@ const Index = () => {
               <CardContent className="p-4 sm:p-6 lg:p-8">
                 <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Trial</h3>
                 <div className="mb-4 sm:mb-6 flex items-baseline justify-center">
-                  <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">$29.99</span>
+                  <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">₹2,500</span>
                   <span className="text-sm text-gray-500 ml-1">/one-time</span>
                 </div>
                 <p className="text-gray-600 mb-2 text-xs sm:text-sm lg:text-base">
@@ -346,8 +346,8 @@ const Index = () => {
               <CardContent className="p-4 sm:p-6 lg:p-8">
                 <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Pro</h3>
                 <div className="mb-4 sm:mb-6 flex items-baseline justify-center">
-                  <span className="text-lg sm:text-xl text-gray-400 line-through mr-2">$99.99</span>
-                  <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">$79.99</span>
+                  <span className="text-lg sm:text-xl text-gray-400 line-through mr-2">₹10,000</span>
+                  <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">₹7,500</span>
                   <span className="text-sm text-gray-500 ml-1">/m</span>
                 </div>
                 

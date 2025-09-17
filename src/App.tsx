@@ -8,6 +8,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import DataSecurity from "./pages/DataSecurity";
 import Support from "./pages/Support";
 import Partners from "./pages/Partners";
+import ShopifyIntegration from "./pages/ShopifyIntegration";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/data-security" element={<DataSecurity />} />
           <Route path="/support" element={<Support />} />
           <Route path="/partners" element={<Partners />} />
+          <Route path="/shopify-integration" element={<ShopifyIntegration />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
