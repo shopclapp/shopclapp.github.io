@@ -6,6 +6,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { MessageCircle, Square, Circle, Triangle, CheckCircle, Menu, X, Instagram } from 'lucide-react';
 import WhatsAppDemo from "@/components/WhatsAppDemo";
 import AIAgentsCircle from "@/components/AIAgentsCircle";
+import metaLogo from "@/assets/meta-logo.png";
 
 const Index = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -474,23 +475,15 @@ const Index = () => {
             <div className="flex items-center justify-center space-x-8">
               <div className="flex flex-col items-center space-y-3">
                 <div className="relative">
-                  <svg width="120" height="24" viewBox="0 0 120 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.5 3.5C6.35786 3.5 3 6.85786 3 11C3 15.1421 6.35786 18.5 10.5 18.5C14.6421 18.5 18 15.1421 18 11C18 6.85786 14.6421 3.5 10.5 3.5Z" fill="url(#metaGradient)"/>
-                    <path d="M35.5 7H39L43.5 15L48 7H51.5V20H48.5V11.5L44.5 19H42.5L38.5 11.5V20H35.5V7Z" fill="#0081FB"/>
-                    <path d="M59 7V10H64.5V12.5H59V17H66V20H56V7H66V10H59Z" fill="#0081FB"/>
-                    <path d="M74.5 10V20H71.5V10H68V7H78V10H74.5Z" fill="#0081FB"/>
-                    <path d="M86 7L92 20H88.5L87.5 17.5H82.5L81.5 20H78L84 7H86ZM86.5 15L85 11L83.5 15H86.5Z" fill="#0081FB"/>
-                    <defs>
-                      <linearGradient id="metaGradient" x1="3" y1="11" x2="18" y2="11" gradientUnits="userSpaceOnUse">
-                        <stop stopColor="#0081FB"/>
-                        <stop offset="1" stopColor="#0064E0"/>
-                      </linearGradient>
-                    </defs>
-                  </svg>
+                  <img 
+                    src={metaLogo} 
+                    alt="Meta" 
+                    className="h-8 w-auto"
+                  />
                 </div>
                 <span className="text-xs text-gray-500">Meta Tech Provider</span>
               </div>
-              
+
               <div className="h-12 w-px bg-gray-300"></div>
               
               <div className="flex flex-col items-center space-y-3">
