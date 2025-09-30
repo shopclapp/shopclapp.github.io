@@ -412,6 +412,80 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Meta Partnership Section */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-gray-50 to-white border-t border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12">
+            <div className="inline-flex items-center justify-center mb-4">
+              <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+              <span className="text-sm font-medium text-gray-600">Official Partner</span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              Powered by Meta Technology
+            </h2>
+            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+              As a WhatsApp Business Solution Provider, we leverage Meta's enterprise-grade infrastructure to deliver reliable, scalable business solutions.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 sm:gap-8 mb-12">
+            <Card className="border-0 shadow-sm bg-white">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2">Verified Partner</h3>
+                <p className="text-sm text-gray-600">
+                  Official WhatsApp Business Solution Provider with Meta partnership status
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-sm bg-white">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="w-6 h-6 text-emerald-600" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2">Enterprise Infrastructure</h3>
+                <p className="text-sm text-gray-600">
+                  Built on Meta's trusted platform used by billions worldwide
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-sm bg-white">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="w-6 h-6 text-purple-600" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2">Direct API Access</h3>
+                <p className="text-sm text-gray-600">
+                  Premium access to WhatsApp Business API and Meta technologies
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Partnership Logo Display */}
+          <div className="flex flex-col items-center justify-center space-y-4 py-8 border-t border-gray-100">
+            <p className="text-sm text-gray-500 font-medium">In partnership with</p>
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-3">
+                <MessageCircle className="w-8 h-8 text-emerald-600" />
+                <span className="text-xl font-bold text-gray-900">WhatsApp Business</span>
+              </div>
+              <div className="h-8 w-px bg-gray-300"></div>
+              <div className="flex items-center space-x-3">
+                <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-blue-400 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-sm">M</span>
+                </div>
+                <span className="text-xl font-bold text-gray-900">Meta</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="py-6 sm:py-8 lg:py-12 border-t border-gray-200 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
