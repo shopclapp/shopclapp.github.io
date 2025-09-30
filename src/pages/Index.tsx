@@ -412,19 +412,19 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Meta Partnership Section */}
+      {/* Meta Tech Provider Section */}
       <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-gray-50 to-white border-t border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-12">
             <div className="inline-flex items-center justify-center mb-4">
               <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
-              <span className="text-sm font-medium text-gray-600">Official Partner</span>
+              <span className="text-sm font-medium text-gray-600">Official Technology Provider</span>
             </div>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Powered by Meta Technology
+              Meta Tech Provider
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-              As a WhatsApp Business Solution Provider, we leverage Meta's enterprise-grade infrastructure to deliver reliable, scalable business solutions.
+              As an official Meta Tech Provider and WhatsApp Business Solution Provider, we deliver enterprise-grade solutions powered by Meta's global infrastructure.
             </p>
           </div>
 
@@ -434,9 +434,9 @@ const Index = () => {
                 <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="w-6 h-6 text-blue-600" />
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-2">Verified Partner</h3>
+                <h3 className="font-semibold text-gray-900 mb-2">Meta Tech Provider</h3>
                 <p className="text-sm text-gray-600">
-                  Official WhatsApp Business Solution Provider with Meta partnership status
+                  Official Meta Technology Provider with WhatsApp Business Solution Provider status
                 </p>
               </CardContent>
             </Card>
@@ -467,19 +467,35 @@ const Index = () => {
           </div>
 
           {/* Partnership Logo Display */}
-          <div className="flex flex-col items-center justify-center space-y-4 py-8 border-t border-gray-100">
-            <p className="text-sm text-gray-500 font-medium">In partnership with</p>
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-3">
-                <MessageCircle className="w-8 h-8 text-emerald-600" />
-                <span className="text-xl font-bold text-gray-900">WhatsApp Business</span>
-              </div>
-              <div className="h-8 w-px bg-gray-300"></div>
-              <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-blue-400 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">M</span>
+          <div className="flex flex-col items-center justify-center space-y-6 py-8 border-t border-gray-100">
+            <p className="text-sm text-gray-500 font-medium">Technology powered by</p>
+            
+            {/* Meta Logo */}
+            <div className="flex items-center justify-center space-x-8">
+              <div className="flex flex-col items-center space-y-3">
+                <div className="relative">
+                  <svg width="120" height="24" viewBox="0 0 120 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.5 3.5C6.35786 3.5 3 6.85786 3 11C3 15.1421 6.35786 18.5 10.5 18.5C14.6421 18.5 18 15.1421 18 11C18 6.85786 14.6421 3.5 10.5 3.5Z" fill="url(#metaGradient)"/>
+                    <path d="M35.5 7H39L43.5 15L48 7H51.5V20H48.5V11.5L44.5 19H42.5L38.5 11.5V20H35.5V7Z" fill="#0081FB"/>
+                    <path d="M59 7V10H64.5V12.5H59V17H66V20H56V7H66V10H59Z" fill="#0081FB"/>
+                    <path d="M74.5 10V20H71.5V10H68V7H78V10H74.5Z" fill="#0081FB"/>
+                    <path d="M86 7L92 20H88.5L87.5 17.5H82.5L81.5 20H78L84 7H86ZM86.5 15L85 11L83.5 15H86.5Z" fill="#0081FB"/>
+                    <defs>
+                      <linearGradient id="metaGradient" x1="3" y1="11" x2="18" y2="11" gradientUnits="userSpaceOnUse">
+                        <stop stopColor="#0081FB"/>
+                        <stop offset="1" stopColor="#0064E0"/>
+                      </linearGradient>
+                    </defs>
+                  </svg>
                 </div>
-                <span className="text-xl font-bold text-gray-900">Meta</span>
+                <span className="text-xs text-gray-500">Meta Tech Provider</span>
+              </div>
+              
+              <div className="h-12 w-px bg-gray-300"></div>
+              
+              <div className="flex flex-col items-center space-y-3">
+                <MessageCircle className="w-10 h-10 text-emerald-600" />
+                <span className="text-xs text-gray-500">WhatsApp Business</span>
               </div>
             </div>
           </div>
