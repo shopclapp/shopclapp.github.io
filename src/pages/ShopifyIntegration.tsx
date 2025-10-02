@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { MessageCircle, ShoppingCart, Bot, Zap, Users, BarChart3, ArrowRight, CheckCircle } from 'lucide-react';
+import shopifyLogo from "@/assets/shopify-logo.png";
 
 const ShopifyIntegration = () => {
   return (
@@ -303,6 +304,64 @@ const ShopifyIntegration = () => {
             >
               Schedule Demo
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Shopify Partnership Section */}
+      <section className="py-12 lg:py-16 bg-gray-50 border-t border-gray-200">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-3">
+              Shopify Partner
+            </h2>
+            <p className="text-gray-600">
+              Trusted Shopify partner delivering seamless WhatsApp commerce solutions
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-10">
+            <Card className="border-0 shadow-sm bg-white">
+              <CardContent className="p-6 text-center">
+                <h3 className="font-semibold text-gray-900 mb-2">Certified Integration</h3>
+                <p className="text-sm text-gray-600">
+                  Official Shopify partner with verified integration standards
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="border-0 shadow-sm bg-white">
+              <CardContent className="p-6 text-center">
+                <h3 className="font-semibold text-gray-900 mb-2">Enterprise Ready</h3>
+                <p className="text-sm text-gray-600">
+                  Scalable solutions for stores of all sizes
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="border-0 shadow-sm bg-white">
+              <CardContent className="p-6 text-center">
+                <h3 className="font-semibold text-gray-900 mb-2">Dedicated Support</h3>
+                <p className="text-sm text-gray-600">
+                  Expert assistance for your Shopify-WhatsApp integration
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-sm p-8 border border-gray-200">
+            <div className="flex items-center justify-center">
+              <div className="flex flex-col items-center space-y-3">
+                <div className="relative">
+                  <img 
+                    src={shopifyLogo} 
+                    alt="Shopify Partner" 
+                    className="h-10 w-auto"
+                  />
+                </div>
+                <span className="text-xs text-gray-500">Official Partner</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
