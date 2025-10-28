@@ -42,10 +42,10 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4 md:py-6">
             <div className="flex items-center">
-              <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-gray-900 to-gray-700 rounded-lg flex items-center justify-center">
-                <MessageCircle className="w-4 h-4 md:w-6 md:h-6 text-white" />
+              <div className="w-8 h-8 md:w-10 md:h-10 bg-primary rounded-lg flex items-center justify-center shadow-sm">
+                <MessageCircle className="w-4 h-4 md:w-6 md:h-6 text-primary-foreground" />
               </div>
-              <span className="ml-2 md:ml-3 text-xl md:text-2xl font-bold text-gray-900">Clapp</span>
+              <span className="ml-2 md:ml-3 text-xl md:text-2xl font-bold text-foreground">Clapp</span>
             </div>
             
             <div className="md:hidden">
@@ -58,14 +58,15 @@ const Index = () => {
             </div>
 
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#features" className="text-gray-600 hover:text-gray-900 transition-colors">Features</a>
-              <a href="#pricing" className="text-gray-600 hover:text-gray-900 transition-colors">Pricing</a>
-              <Link to="/shopify-integration" className="text-gray-600 hover:text-gray-900 transition-colors">Shopify</Link>
+              <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors font-medium">Features</a>
+              <a href="#roadmap" className="text-muted-foreground hover:text-foreground transition-colors font-medium">Roadmap</a>
+              <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors font-medium">Pricing</a>
+              <Link to="/shopify-integration" className="text-muted-foreground hover:text-foreground transition-colors font-medium">Shopify</Link>
               <a
                 href="https://wa.me/14707342241?text=Book%20demo."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gray-900 hover:bg-gray-800 text-white px-6 py-2 rounded-lg shadow-sm"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-2.5 rounded-lg shadow-sm font-semibold transition-all hover:shadow-md"
                 style={{ textDecoration: 'none' }}
               >
                 Book Free Demo
@@ -74,16 +75,17 @@ const Index = () => {
           </div>
 
           {mobileMenuOpen && (
-            <div className="md:hidden border-t border-gray-100 py-4">
+            <div className="md:hidden border-t border-border py-4">
               <div className="flex flex-col space-y-4">
-                <a href="#features" className="text-gray-600 hover:text-gray-900 transition-colors px-4 py-2" onClick={() => setMobileMenuOpen(false)}>Features</a>
-                <a href="#pricing" className="text-gray-600 hover:text-gray-900 transition-colors px-4 py-2" onClick={() => setMobileMenuOpen(false)}>Pricing</a>
-                <Link to="/shopify-integration" className="text-gray-600 hover:text-gray-900 transition-colors px-4 py-2" onClick={() => setMobileMenuOpen(false)}>Shopify</Link>
+                <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors px-4 py-2 font-medium" onClick={() => setMobileMenuOpen(false)}>Features</a>
+                <a href="#roadmap" className="text-muted-foreground hover:text-foreground transition-colors px-4 py-2 font-medium" onClick={() => setMobileMenuOpen(false)}>Roadmap</a>
+                <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors px-4 py-2 font-medium" onClick={() => setMobileMenuOpen(false)}>Pricing</a>
+                <Link to="/shopify-integration" className="text-muted-foreground hover:text-foreground transition-colors px-4 py-2 font-medium" onClick={() => setMobileMenuOpen(false)}>Shopify</Link>
                 <a
                   href="https://wa.me/14707342241?text=Book%20demo."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-gray-900 hover:bg-gray-800 text-white px-4 py-3 rounded-lg shadow-sm mx-4 text-center"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-3 rounded-lg shadow-sm mx-4 text-center font-semibold"
                   style={{ textDecoration: 'none' }}
                   onClick={() => setMobileMenuOpen(false)}
                 >
@@ -95,41 +97,110 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Hero Section with WhatsApp Demo */}
-      <section className="pt-8 sm:pt-12 lg:pt-20 pb-12 sm:pb-16 lg:pb-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+      {/* Hero Section */}
+      <section className="relative pt-12 sm:pt-16 lg:pt-24 pb-16 sm:pb-20 lg:pb-28 overflow-hidden">
+        {/* Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-muted/30 to-white"></div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Hero Content */}
-            <div className="text-center lg:text-left order-2 lg:order-1">
-              <div className="inline-flex items-center mb-4 sm:mb-6 lg:mb-8">
-                <div className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 bg-gradient-to-br from-emerald-400 to-blue-500 rounded-full mr-2 sm:mr-3"></div>
-                <span className="text-xs sm:text-sm font-medium text-gray-600">Redefining Commerce</span>
+            <div className="text-center lg:text-left">
+              {/* Status Badge */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-6">
+                <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+                <span className="text-sm font-medium text-foreground">Conversational Commerce Made Simple</span>
               </div>
               
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-4 sm:mb-6 lg:mb-8 leading-tight">
-                AI-Powered.<br />
-                WhatsApp-Native.
+              {/* Main Headline */}
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-6 leading-[1.1]">
+                Sell Where Your<br />
+                Customers Are
               </h1>
               
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mb-6 sm:mb-8 lg:mb-12 max-w-2xl mx-auto lg:mx-0">
-                Run your entire business on WhatsApp with Zero Team!
+              {/* Subheading */}
+              <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0">
+                One platform. Every chat channel. Shopify synced. Revenue multiplied.
               </p>
               
-              <a
-                href="https://wa.me/14707342241?text=Book%20demo."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block w-full sm:w-auto px-6 sm:px-8 lg:px-12 h-11 sm:h-12 lg:h-14 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded-lg shadow-sm flex items-center justify-center text-sm sm:text-base"
-                style={{ textDecoration: 'none' }}
-              >
-                Book Free Demo
-              </a>
+              {/* Key Stats */}
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-8 text-sm text-muted-foreground">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-primary" />
+                  <span>500M+ WhatsApp users in India</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-primary" />
+                  <span>80%+ open rates</span>
+                </div>
+              </div>
+              
+              {/* Multi-Channel Badge */}
+              <div className="inline-flex items-center gap-3 px-4 py-2 bg-accent/10 border border-accent/30 rounded-lg mb-8">
+                <span className="text-sm font-medium text-foreground">📱 WhatsApp Live</span>
+                <span className="text-sm text-muted-foreground">•</span>
+                <span className="text-sm text-muted-foreground">Instagram, Messenger, Webchat: Q1-Q2 2025</span>
+              </div>
+              
+              {/* CTAs */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <a
+                  href="https://wa.me/14707342241?text=Book%20demo."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                  style={{ textDecoration: 'none' }}
+                >
+                  Start Selling on Chat
+                </a>
+                <a
+                  href="#roadmap"
+                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-border hover:border-primary bg-background hover:bg-primary/5 text-foreground font-semibold rounded-xl transition-all duration-300"
+                  style={{ textDecoration: 'none' }}
+                >
+                  See the Roadmap
+                </a>
+              </div>
+              
+              {/* Social Proof */}
+              <div className="mt-12 pt-8 border-t border-border">
+                <p className="text-sm text-muted-foreground mb-4">Trusted by 100+ Indian brands</p>
+                <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6">
+                  {brands.slice(0, 3).map((brand, index) => (
+                    <span key={index} className="text-sm font-semibold text-foreground opacity-60 hover:opacity-100 transition-opacity">
+                      {brand}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
 
-            {/* WhatsApp Demo */}
-            <div className="flex justify-center lg:justify-end order-1 lg:order-2">
-              <div className="w-full max-w-sm">
-                <WhatsAppDemo />
+            {/* WhatsApp Demo / Multi-Channel Visual */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative w-full max-w-md">
+                {/* Main WhatsApp Demo */}
+                <div className="relative z-10">
+                  <WhatsAppDemo />
+                </div>
+                
+                {/* Coming Soon Channels - Floating Cards */}
+                <div className="absolute -right-4 top-1/4 z-0 opacity-40 hover:opacity-70 transition-opacity">
+                  <div className="bg-white/80 backdrop-blur-sm border border-border rounded-lg px-3 py-2 shadow-lg">
+                    <div className="flex items-center gap-2">
+                      <Instagram className="w-4 h-4 text-pink-600" />
+                      <span className="text-xs font-medium text-foreground">Coming Q1 2025</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="absolute -left-4 bottom-1/4 z-0 opacity-40 hover:opacity-70 transition-opacity">
+                  <div className="bg-white/80 backdrop-blur-sm border border-border rounded-lg px-3 py-2 shadow-lg">
+                    <div className="flex items-center gap-2">
+                      <MessageCircle className="w-4 h-4 text-blue-600" />
+                      <span className="text-xs font-medium text-foreground">Messenger Q1 2025</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
