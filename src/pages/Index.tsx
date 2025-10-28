@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { MessageCircle, Square, Circle, Triangle, CheckCircle, Menu, X, Instagram } from 'lucide-react';
+import { MessageCircle, Square, Circle, Triangle, CheckCircle, Menu, X, Instagram, TrendingDown, TrendingUp, Zap, ShoppingCart, Users, BarChart3, Package, CreditCard, Truck, Globe, ArrowRight, Facebook, Monitor, Blocks, Link2 } from 'lucide-react';
 import WhatsAppDemo from "@/components/WhatsAppDemo";
 import AIAgentsCircle from "@/components/AIAgentsCircle";
 import metaLogo from "@/assets/meta-logo.png";
@@ -208,15 +208,15 @@ const Index = () => {
       </section>
 
       {/* Brands Scrolling Section */}
-      <section className="py-8 sm:py-12 lg:py-16 bg-gray-50 border-t border-gray-200">
+      <section className="py-8 sm:py-12 lg:py-16 bg-muted border-t border-border">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-6 sm:mb-8 lg:mb-12">
-            <p className="text-sm sm:text-base lg:text-lg text-gray-600 font-medium">
+            <p className="text-sm sm:text-base lg:text-lg text-muted-foreground font-medium">
               Trusted by growing businesses
             </p>
           </div>
           
-          <div className="relative overflow-hidden bg-white rounded-2xl border border-emerald-100 shadow-sm p-6 sm:p-8">
+          <div className="relative overflow-hidden bg-card rounded-2xl border border-primary/20 shadow-sm p-6 sm:p-8">
             <div className="flex animate-scroll">
               {/* First set of brands */}
               {brands.map((brand, index) => (
@@ -224,7 +224,7 @@ const Index = () => {
                   key={`first-${index}`}
                   className="flex-shrink-0 mx-6 sm:mx-8 lg:mx-12 text-center"
                 >
-                  <span className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 hover:text-emerald-600 transition-colors">
+                  <span className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground hover:text-primary transition-colors">
                     {brand}
                   </span>
                 </div>
@@ -235,65 +235,541 @@ const Index = () => {
                   key={`second-${index}`}
                   className="flex-shrink-0 mx-6 sm:mx-8 lg:mx-12 text-center"
                 >
-                  <span className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 hover:text-emerald-600 transition-colors">
+                  <span className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground hover:text-primary transition-colors">
                     {brand}
                   </span>
                 </div>
               ))}
             </div>
             
-            {/* Subtle emerald accent line */}
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-emerald-400 to-blue-500 rounded-full"></div>
+            {/* Accent line */}
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></div>
+          </div>
+        </div>
+      </section>
+
+      {/* THE SHIFT SECTION - Why This Matters */}
+      <section className="py-16 sm:py-20 lg:py-28 bg-background">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 lg:mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              Let's Be Honest
+            </h2>
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
+              Your store brings traffic. Email brings silence. Chat is where customers live—but you're not there.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+            {/* Card 1: The Problem */}
+            <Card className="border-2 border-border hover:border-destructive/50 transition-all duration-300 hover:shadow-lg">
+              <CardContent className="p-6 lg:p-8">
+                <div className="w-12 h-12 bg-destructive/10 rounded-xl flex items-center justify-center mb-4">
+                  <TrendingDown className="w-6 h-6 text-destructive" />
+                </div>
+                <div className="text-4xl font-bold text-foreground mb-2">20%</div>
+                <p className="text-sm text-muted-foreground mb-4">email open rate</p>
+                <h3 className="text-lg font-bold text-foreground mb-3">The Problem</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Your store brings traffic. Email brings silence. Chat is where customers live—but you're not there.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Card 2: The Opportunity */}
+            <Card className="border-2 border-primary hover:border-primary transition-all duration-300 hover:shadow-xl">
+              <CardContent className="p-6 lg:p-8">
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                  <TrendingUp className="w-6 h-6 text-primary" />
+                </div>
+                <div className="text-4xl font-bold text-foreground mb-2">80%+</div>
+                <p className="text-sm text-muted-foreground mb-4">WhatsApp open rate</p>
+                <h3 className="text-lg font-bold text-foreground mb-3">The Opportunity</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  500M+ WhatsApp users in India. Growing across Instagram, Messenger. Customers expect real-time, personal service. Scale that with AI.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Card 3: The Outcome */}
+            <Card className="border-2 border-border hover:border-accent/50 transition-all duration-300 hover:shadow-lg">
+              <CardContent className="p-6 lg:p-8">
+                <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+                  <Zap className="w-6 h-6 text-accent" />
+                </div>
+                <div className="text-4xl font-bold text-foreground mb-2">5x</div>
+                <p className="text-sm text-muted-foreground mb-4">customer lifetime value</p>
+                <h3 className="text-lg font-bold text-foreground mb-3">The Outcome</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  One-time buyers become loyal customers through conversation. Multiply that impact across channels as you grow.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Optional 4th card on desktop */}
+          <div className="mt-6 lg:mt-8 hidden lg:block">
+            <Card className="border-2 border-border hover:border-primary/50 transition-all duration-300">
+              <CardContent className="p-8">
+                <div className="flex items-center gap-8">
+                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Globe className="w-8 h-8 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-foreground mb-2">The Multi-Channel Advantage</h3>
+                    <p className="text-muted-foreground">
+                      Start on WhatsApp. Add Instagram, Messenger, Webchat as you scale. One setup. Every channel. No rebuilding.
+                    </p>
+                  </div>
+                  <div className="text-right flex-shrink-0">
+                    <div className="text-2xl font-bold text-foreground">Omnichannel</div>
+                    <p className="text-sm text-muted-foreground">readiness</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* HOW IT WORKS SECTION */}
+      <section className="py-16 sm:py-20 lg:py-28 bg-muted">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 lg:mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              How It Works
+            </h2>
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
+              Build once. Reach everywhere. Five simple steps to conversational commerce.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-5 gap-6 lg:gap-8">
+            {/* Step 1 */}
+            <div className="relative">
+              <Card className="border-2 border-primary hover:shadow-lg transition-all">
+                <CardContent className="p-6 text-center">
+                  <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">
+                    1
+                  </div>
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <Link2 className="w-5 h-5 text-primary" />
+                  </div>
+                  <h3 className="font-bold text-foreground mb-2">Connect</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Sync Shopify. Connect WhatsApp today. Instagram, Messenger, Webchat coming soon.
+                  </p>
+                </CardContent>
+              </Card>
+              <ArrowRight className="hidden md:block absolute -right-4 top-1/2 -translate-y-1/2 w-6 h-6 text-primary z-10" />
+            </div>
+
+            {/* Step 2 */}
+            <div className="relative">
+              <Card className="border-2 border-border hover:border-primary hover:shadow-lg transition-all">
+                <CardContent className="p-6 text-center">
+                  <div className="w-12 h-12 bg-secondary text-secondary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">
+                    2
+                  </div>
+                  <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <MessageCircle className="w-5 h-5 text-secondary" />
+                  </div>
+                  <h3 className="font-bold text-foreground mb-2">Unify</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    One dashboard. All conversations. Every channel in one place.
+                  </p>
+                </CardContent>
+              </Card>
+              <ArrowRight className="hidden md:block absolute -right-4 top-1/2 -translate-y-1/2 w-6 h-6 text-primary z-10" />
+            </div>
+
+            {/* Step 3 */}
+            <div className="relative">
+              <Card className="border-2 border-border hover:border-primary hover:shadow-lg transition-all">
+                <CardContent className="p-6 text-center">
+                  <div className="w-12 h-12 bg-secondary text-secondary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">
+                    3
+                  </div>
+                  <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <Zap className="w-5 h-5 text-secondary" />
+                  </div>
+                  <h3 className="font-bold text-foreground mb-2">Automate</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    AI learns your customers. Intelligence carries to all channels.
+                  </p>
+                </CardContent>
+              </Card>
+              <ArrowRight className="hidden md:block absolute -right-4 top-1/2 -translate-y-1/2 w-6 h-6 text-primary z-10" />
+            </div>
+
+            {/* Step 4 */}
+            <div className="relative">
+              <Card className="border-2 border-border hover:border-primary hover:shadow-lg transition-all">
+                <CardContent className="p-6 text-center">
+                  <div className="w-12 h-12 bg-secondary text-secondary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">
+                    4
+                  </div>
+                  <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <ShoppingCart className="w-5 h-5 text-secondary" />
+                  </div>
+                  <h3 className="font-bold text-foreground mb-2">Sell</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Revenue happens in conversation. Close sales in their preferred channel.
+                  </p>
+                </CardContent>
+              </Card>
+              <ArrowRight className="hidden md:block absolute -right-4 top-1/2 -translate-y-1/2 w-6 h-6 text-primary z-10" />
+            </div>
+
+            {/* Step 5 */}
+            <div className="relative">
+              <Card className="border-2 border-border hover:border-primary hover:shadow-lg transition-all">
+                <CardContent className="p-6 text-center">
+                  <div className="w-12 h-12 bg-secondary text-secondary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">
+                    5
+                  </div>
+                  <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <Users className="w-5 h-5 text-secondary" />
+                  </div>
+                  <h3 className="font-bold text-foreground mb-2">Retain & Grow</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Build relationships, not just transactions. Across all channels.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-lg font-semibold text-foreground mb-4">
+              Start with WhatsApp today. Add channels as you grow. Build once. Reach everywhere.
+            </p>
+            <a
+              href="https://wa.me/14707342241?text=Book%20demo."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+              style={{ textDecoration: 'none' }}
+            >
+              Get Started Today
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ROADMAP SECTION */}
+      <section id="roadmap" className="py-16 sm:py-20 lg:py-28 bg-background">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 lg:mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              The Multi-Channel Future
+            </h2>
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
+              WhatsApp is just the beginning. We're building the conversational commerce platform for every channel.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-6 lg:gap-8">
+            {/* NOW - WhatsApp Live */}
+            <Card className="border-2 border-primary shadow-lg">
+              <CardContent className="p-6">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary text-primary-foreground rounded-full text-xs font-bold mb-4">
+                  ✓ LIVE NOW
+                </div>
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                  <MessageCircle className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-2">WhatsApp Commerce</h3>
+                <p className="text-sm text-muted-foreground mb-4">Production ready & scaling</p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <span>Full automation</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <span>AI support</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <span>Shopify sync</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <span>Analytics</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Q1 2025 - Instagram & Messenger */}
+            <Card className="border-2 border-accent shadow-md">
+              <CardContent className="p-6">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent text-accent-foreground rounded-full text-xs font-bold mb-4">
+                  Q1 2025
+                </div>
+                <div className="flex gap-2 mb-4">
+                  <div className="w-12 h-12 bg-pink-100 rounded-xl flex items-center justify-center">
+                    <Instagram className="w-6 h-6 text-pink-600" />
+                  </div>
+                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                    <Facebook className="w-6 h-6 text-blue-600" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Instagram & Messenger</h3>
+                <p className="text-sm text-muted-foreground mb-4">Beta access now</p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                    <span>Same AI, unified inbox</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                    <span>Cross-channel campaigns</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                    <span>Early access for partners</span>
+                  </li>
+                </ul>
+                <a
+                  href="https://wa.me/14707342241?text=I%20want%20early%20access%20to%20Instagram%20and%20Messenger"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex items-center text-sm font-semibold text-accent hover:text-accent/80 transition-colors"
+                  style={{ textDecoration: 'none' }}
+                >
+                  Join beta →
+                </a>
+              </CardContent>
+            </Card>
+
+            {/* Q2 2025 - Webchat */}
+            <Card className="border-2 border-border">
+              <CardContent className="p-6">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted text-muted-foreground rounded-full text-xs font-bold mb-4">
+                  Q2 2025
+                </div>
+                <div className="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center mb-4">
+                  <Monitor className="w-6 h-6 text-secondary" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Embedded Webchat</h3>
+                <p className="text-sm text-muted-foreground mb-4">In development</p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-secondary mt-0.5 flex-shrink-0" />
+                    <span>Live on-site conversations</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-secondary mt-0.5 flex-shrink-0" />
+                    <span>Persistent chat</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-secondary mt-0.5 flex-shrink-0" />
+                    <span>No app needed</span>
+                  </li>
+                </ul>
+                <button className="mt-4 inline-flex items-center text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors">
+                  Join waitlist →
+                </button>
+              </CardContent>
+            </Card>
+
+            {/* Future - More Channels */}
+            <Card className="border-2 border-border opacity-70">
+              <CardContent className="p-6">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted text-muted-foreground rounded-full text-xs font-bold mb-4">
+                  FUTURE
+                </div>
+                <div className="w-12 h-12 bg-muted rounded-xl flex items-center justify-center mb-4">
+                  <Blocks className="w-6 h-6 text-muted-foreground" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Channel Flexibility</h3>
+                <p className="text-sm text-muted-foreground mb-4">Based on demand</p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• LINE, Telegram, SMS</li>
+                  <li>• Custom integrations</li>
+                  <li>• Your channel needs</li>
+                </ul>
+                <p className="mt-4 text-xs text-muted-foreground">
+                  Custom API integrations available now
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-lg font-semibold text-foreground mb-2">
+              Start with WhatsApp today. Add channels as you grow. Build once. Reach everywhere.
+            </p>
+            <p className="text-muted-foreground">Join 100+ Indian brands building repeat revenue through conversation.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* INTEGRATIONS SHOWCASE SECTION */}
+      <section className="py-16 sm:py-20 lg:py-28 bg-muted">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 lg:mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              Integrations & Extensibility
+            </h2>
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
+              Connect your existing tools. Build custom workflows. Scale without limits.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {/* Currently Available */}
+            <Card className="border-2 border-primary">
+              <CardContent className="p-8">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary text-primary-foreground rounded-full text-xs font-bold mb-6">
+                  ✓ AVAILABLE NOW
+                </div>
+                <h3 className="text-2xl font-bold text-foreground mb-6">Currently Available</h3>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4 p-4 bg-background rounded-lg">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Package className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-foreground">Shopify</div>
+                      <div className="text-sm text-muted-foreground">Full e-commerce sync</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4 p-4 bg-background rounded-lg">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <CreditCard className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-foreground">Razorpay</div>
+                      <div className="text-sm text-muted-foreground">Payment gateway</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4 p-4 bg-background rounded-lg">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Link2 className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-foreground">Webhook Support</div>
+                      <div className="text-sm text-muted-foreground">Custom integrations</div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Coming Soon */}
+            <Card className="border-2 border-accent">
+              <CardContent className="p-8">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent text-accent-foreground rounded-full text-xs font-bold mb-6">
+                  COMING SOON
+                </div>
+                <h3 className="text-2xl font-bold text-foreground mb-6">Q1-Q2 2025</h3>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4 p-4 bg-background rounded-lg opacity-70">
+                    <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Package className="w-6 h-6 text-accent" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-foreground">WooCommerce & BigCommerce</div>
+                      <div className="text-sm text-muted-foreground">More e-commerce platforms</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4 p-4 bg-background rounded-lg opacity-70">
+                    <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <BarChart3 className="w-6 h-6 text-accent" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-foreground">Epicor ERP</div>
+                      <div className="text-sm text-muted-foreground">Enterprise resource planning</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4 p-4 bg-background rounded-lg opacity-70">
+                    <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Zap className="w-6 h-6 text-accent" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-foreground">n8n Workflows</div>
+                      <div className="text-sm text-muted-foreground">Advanced automation</div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center">
+            <Card className="border-2 border-border inline-block">
+              <CardContent className="p-8">
+                <h3 className="text-xl font-bold text-foreground mb-2">Don't see your platform?</h3>
+                <p className="text-muted-foreground mb-6">Build custom integrations with our API or connect via n8n. Let's build it together.</p>
+                <div className="flex flex-wrap gap-4 justify-center">
+                  <button className="px-6 py-3 border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold rounded-lg transition-all">
+                    Explore API Docs
+                  </button>
+                  <a
+                    href="https://wa.me/14707342241?text=I%20need%20a%20custom%20integration"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-6 py-3 bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-lg transition-all"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    Request Integration
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* Feature Showcase Section */}
-      <section id="features" className="py-12 sm:py-16 lg:py-20 bg-white">
+      <section id="features" className="py-12 sm:py-16 lg:py-20 bg-background">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-12 lg:mb-16">
             <div className="text-center">
-              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gray-900 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 lg:mb-6">
-                <Square className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-white" />
+              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 lg:mb-6 shadow-md">
+                <Square className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-primary-foreground" />
               </div>
-              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">WhatsApp First</h3>
-              <p className="text-sm sm:text-base text-gray-600 px-2 sm:px-4">Where your customers already are. No need to drive traffic elsewhere.</p>
+              <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2 sm:mb-3">WhatsApp First</h3>
+              <p className="text-sm sm:text-base text-muted-foreground px-2 sm:px-4">Where your customers already are. No need to drive traffic elsewhere.</p>
             </div>
             
             <div className="text-center">
-              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gray-900 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 lg:mb-6">
-                <Circle className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-white" />
+              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 lg:mb-6 shadow-md">
+                <Circle className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-primary-foreground" />
               </div>
-              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">AI Handles All</h3>
-              <p className="text-sm sm:text-base text-gray-600 px-2 sm:px-4">Sales, operations, and CRM — no team required to get started.</p>
+              <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2 sm:mb-3">AI Handles All</h3>
+              <p className="text-sm sm:text-base text-muted-foreground px-2 sm:px-4">Sales, operations, and CRM — no team required to get started.</p>
             </div>
             
             <div className="text-center sm:col-span-2 lg:col-span-1">
-              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gray-900 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 lg:mb-6">
-                <Triangle className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-white" />
+              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 lg:mb-6 shadow-md">
+                <Triangle className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-primary-foreground" />
               </div>
-              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">Fast Setup</h3>
-              <p className="text-sm sm:text-base text-gray-600 px-2 sm:px-4">Go live in 3–5 working days with full support and guidance.</p>
+              <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2 sm:mb-3">Fast Setup</h3>
+              <p className="text-sm sm:text-base text-muted-foreground px-2 sm:px-4">Go live in 3–5 working days with full support and guidance.</p>
             </div>
           </div>
 
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 md:space-x-8 lg:space-x-12">
             <div className="text-center">
               <div className="flex items-center justify-center mb-1 sm:mb-2">
-                <div className="w-3 h-3 bg-emerald-500 rounded-full mr-2"></div>
-                <span className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">3X Revenue</span>
+                <div className="w-3 h-3 bg-primary rounded-full mr-2"></div>
+                <span className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground">3X Revenue</span>
               </div>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center mb-1 sm:mb-2">
-                <div className="w-3 h-3 bg-blue-500 rounded-full mr-2"></div>
-                <span className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">5X Repeat Purchase</span>
+                <div className="w-3 h-3 bg-accent rounded-full mr-2"></div>
+                <span className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground">5X Repeat Purchase</span>
               </div>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center mb-1 sm:mb-2">
-                <div className="w-3 h-3 bg-purple-500 rounded-full mr-2"></div>
-                <span className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">75% Cost Reduction</span>
+                <div className="w-3 h-3 bg-secondary rounded-full mr-2"></div>
+                <span className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground">75% Cost Reduction</span>
               </div>
             </div>
           </div>
@@ -301,26 +777,26 @@ const Index = () => {
       </section>
 
       {/* Detailed Features Section */}
-      <section className="py-12 sm:py-16 lg:py-24 bg-gray-50">
+      <section className="py-12 sm:py-16 lg:py-24 bg-muted">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Feature 1 */}
           <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-center mb-12 sm:mb-16 lg:mb-24">
             <div className="order-2 lg:order-1">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 lg:mb-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4 lg:mb-6">
                 Start, Run, Grow in WhatsApp
               </h2>
-              <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-4 sm:mb-6 lg:mb-8">
+              <p className="text-sm sm:text-base lg:text-lg text-muted-foreground mb-4 sm:mb-6 lg:mb-8">
                 Transform your WhatsApp into a complete business platform. From customer inquiry to order fulfillment, everything happens seamlessly within the app your customers already use daily.
               </p>
               <div className="space-y-2 sm:space-y-3 lg:space-y-4">
-                <div className="font-semibold text-gray-900 text-sm sm:text-base">• We Set You Up</div>
-                <div className="font-semibold text-gray-900 text-sm sm:text-base">• AI takes over</div>
-                <div className="font-semibold text-gray-900 text-sm sm:text-base">• You Scale!</div>
+                <div className="font-semibold text-foreground text-sm sm:text-base">• We Set You Up</div>
+                <div className="font-semibold text-foreground text-sm sm:text-base">• AI takes over</div>
+                <div className="font-semibold text-foreground text-sm sm:text-base">• You Scale!</div>
               </div>
             </div>
             <div className="flex justify-center order-1 lg:order-2">
-              <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 bg-gray-100 rounded-3xl flex items-center justify-center">
-                <Square className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 text-gray-400" />
+              <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 bg-background rounded-3xl flex items-center justify-center shadow-md">
+                <Square className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 text-muted-foreground" />
               </div>
             </div>
           </div>
@@ -328,29 +804,29 @@ const Index = () => {
           {/* Feature 2 */}
           <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-center mb-12 sm:mb-16 lg:mb-24">
             <div className="flex justify-center order-1 lg:order-1">
-              <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 bg-gray-100 rounded-3xl flex items-center justify-center">
-                <Circle className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 text-gray-400" />
+              <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 bg-background rounded-3xl flex items-center justify-center shadow-md">
+                <Circle className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 text-muted-foreground" />
               </div>
             </div>
             <div className="order-2 lg:order-2">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 lg:mb-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4 lg:mb-6">
                 Complete Commerce Automation
               </h2>
-              <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-4 sm:mb-6 lg:mb-8">
+              <p className="text-sm sm:text-base lg:text-lg text-muted-foreground mb-4 sm:mb-6 lg:mb-8">
                 Your AI assistant handles product catalogs, processes orders, manages payments, and tracks deliveries. No manual work required from your end.
               </p>
               <div className="space-y-2 sm:space-y-3 lg:space-y-4">
                 <div className="flex items-start">
-                  <div className="w-3 h-3 bg-gray-900 rounded-full mr-2 sm:mr-3 mt-1.5 flex-shrink-0"></div>
-                  <span className="font-semibold text-gray-900 text-sm sm:text-base">Catalog Management</span>
+                  <div className="w-3 h-3 bg-primary rounded-full mr-2 sm:mr-3 mt-1.5 flex-shrink-0"></div>
+                  <span className="font-semibold text-foreground text-sm sm:text-base">Catalog Management</span>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-3 h-3 bg-gray-900 rounded-full mr-2 sm:mr-3 mt-1.5 flex-shrink-0"></div>
-                  <span className="font-semibold text-gray-900 text-sm sm:text-base">Order Processing</span>
+                  <div className="w-3 h-3 bg-primary rounded-full mr-2 sm:mr-3 mt-1.5 flex-shrink-0"></div>
+                  <span className="font-semibold text-foreground text-sm sm:text-base">Order Processing</span>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-3 h-3 bg-gray-900 rounded-full mr-2 sm:mr-3 mt-1.5 flex-shrink-0"></div>
-                  <span className="font-semibold text-gray-900 text-sm sm:text-base">Payment Integration</span>
+                  <div className="w-3 h-3 bg-primary rounded-full mr-2 sm:mr-3 mt-1.5 flex-shrink-0"></div>
+                  <span className="font-semibold text-foreground text-sm sm:text-base">Payment Integration</span>
                 </div>
               </div>
             </div>
@@ -359,21 +835,21 @@ const Index = () => {
           {/* Feature 3 */}
           <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-center">
             <div className="order-2 lg:order-1">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 lg:mb-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4 lg:mb-6">
                 Built for Scale
               </h2>
-              <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-4 sm:mb-6 lg:mb-8">
+              <p className="text-sm sm:text-base lg:text-lg text-muted-foreground mb-4 sm:mb-6 lg:mb-8">
                 Whether you're handling 10 customers or 10,000, our platform scales with your business. Advanced analytics help you understand customer behavior and optimize operations.
               </p>
               <div className="space-y-2 sm:space-y-3 lg:space-y-4">
-                <div className="font-semibold text-gray-900 text-sm sm:text-base">• Customer Analytics</div>
-                <div className="font-semibold text-gray-900 text-sm sm:text-base">• Business Insights</div>
-                <div className="font-semibold text-gray-900 text-sm sm:text-base">• Performance Tracking</div>
+                <div className="font-semibold text-foreground text-sm sm:text-base">• Customer Analytics</div>
+                <div className="font-semibold text-foreground text-sm sm:text-base">• Business Insights</div>
+                <div className="font-semibold text-foreground text-sm sm:text-base">• Performance Tracking</div>
               </div>
             </div>
             <div className="flex justify-center order-1 lg:order-2">
-              <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 bg-gray-100 rounded-3xl flex items-center justify-center">
-                <Triangle className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 text-gray-400" />
+              <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 bg-background rounded-3xl flex items-center justify-center shadow-md">
+                <Triangle className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 text-muted-foreground" />
               </div>
             </div>
           </div>
