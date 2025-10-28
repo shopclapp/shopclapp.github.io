@@ -23,7 +23,8 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route path="/" element={<EcommerceCharles />} />
+          <Route path="/old" element={<Index />} />
           <Route path="/ecommerce" element={<EcommerceLanding />} />
           <Route path="/charles" element={<EcommerceCharles />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
