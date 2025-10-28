@@ -99,7 +99,7 @@ const EcommerceCharles = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div className="space-y-8">
-              <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+              <h1 className="text-5xl md:text-7xl font-semibold leading-[1.2] tracking-[-0.02em]">
                 Engage and convert via{" "}
                 <span className="gradient-text-hero">Conversational AI agents and CRM</span>
               </h1>
@@ -207,7 +207,7 @@ const EcommerceCharles = () => {
       <section className="py-16 bg-gradient-hero text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h3 className="text-3xl md:text-4xl font-bold mb-2">
+            <h3 className="text-3xl md:text-4xl font-medium tracking-[-0.01em] mb-2">
               Unmatched efficiency
             </h3>
             <p className="text-white/80 text-lg">
@@ -244,7 +244,7 @@ const EcommerceCharles = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-4xl md:text-5xl font-semibold tracking-[-0.02em] mb-4">
               Why <span className="gradient-text-primary">Clapp</span>?
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -258,7 +258,7 @@ const EcommerceCharles = () => {
               <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mb-4">
                 <Zap className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="font-bold text-lg mb-2">Personalized at scale</h3>
+              <h3 className="font-medium tracking-[-0.01em] text-lg mb-2">Personalized at scale</h3>
               <p className="text-sm text-muted-foreground">
                 AI agents deliver 1-on-1 experiences to thousands simultaneously
               </p>
@@ -269,7 +269,7 @@ const EcommerceCharles = () => {
               <div className="w-12 h-12 bg-secondary/10 rounded-2xl flex items-center justify-center mb-4">
                 <Users className="w-6 h-6 text-secondary" />
               </div>
-              <h3 className="font-bold text-lg mb-2">Customer-first approach</h3>
+              <h3 className="font-medium tracking-[-0.01em] text-lg mb-2">Customer-first approach</h3>
               <p className="text-sm text-muted-foreground">
                 Meet customers where they are: WhatsApp, Instagram, Messenger
               </p>
@@ -280,7 +280,7 @@ const EcommerceCharles = () => {
               <div className="w-12 h-12 bg-accent/10 rounded-2xl flex items-center justify-center mb-4">
                 <Bot className="w-6 h-6 text-accent" />
               </div>
-              <h3 className="font-bold text-lg mb-2">24/7 availability</h3>
+              <h3 className="font-medium tracking-[-0.01em] text-lg mb-2">24/7 availability</h3>
               <p className="text-sm text-muted-foreground">
                 AI agents never sleep. Serve customers across timezones, always
               </p>
@@ -291,7 +291,7 @@ const EcommerceCharles = () => {
               <div className="w-12 h-12 bg-highlight/10 rounded-2xl flex items-center justify-center mb-4">
                 <MessageSquare className="w-6 h-6 text-highlight" />
               </div>
-              <h3 className="font-bold text-lg mb-2">No coding needed</h3>
+              <h3 className="font-medium tracking-[-0.01em] text-lg mb-2">No coding needed</h3>
               <p className="text-sm text-muted-foreground">
                 Templates, flows, and AI training—all through simple interface
               </p>
@@ -302,7 +302,7 @@ const EcommerceCharles = () => {
               <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mb-4">
                 <BarChart3 className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="font-bold text-lg mb-2">Unmatched efficiency</h3>
+              <h3 className="font-medium tracking-[-0.01em] text-lg mb-2">Unmatched efficiency</h3>
               <p className="text-sm text-muted-foreground">
                 249% ROI, 85% automation—proven results from day one
               </p>
@@ -313,7 +313,7 @@ const EcommerceCharles = () => {
               <div className="w-12 h-12 bg-secondary/10 rounded-2xl flex items-center justify-center mb-4">
                 <Headphones className="w-6 h-6 text-secondary" />
               </div>
-              <h3 className="font-bold text-lg mb-2">Expert support</h3>
+              <h3 className="font-medium tracking-[-0.01em] text-lg mb-2">Expert support</h3>
               <p className="text-sm text-muted-foreground">
                 Dedicated team helps you setup, optimize, and scale
               </p>
@@ -324,7 +324,7 @@ const EcommerceCharles = () => {
               <div className="w-12 h-12 bg-accent/10 rounded-2xl flex items-center justify-center mb-4">
                 <Shield className="w-6 h-6 text-accent" />
               </div>
-              <h3 className="font-bold text-lg mb-2">Privacy & trust</h3>
+              <h3 className="font-medium tracking-[-0.01em] text-lg mb-2">Privacy & trust</h3>
               <p className="text-sm text-muted-foreground">
                 GDPR-compliant, two-factor opt-in, your data stays yours
               </p>
@@ -335,7 +335,7 @@ const EcommerceCharles = () => {
               <div className="w-12 h-12 bg-highlight/10 rounded-2xl flex items-center justify-center mb-4">
                 <ShoppingBag className="w-6 h-6 text-highlight" />
               </div>
-              <h3 className="font-bold text-lg mb-2">Your voice, your way</h3>
+              <h3 className="font-medium tracking-[-0.01em] text-lg mb-2">Your voice, your way</h3>
               <p className="text-sm text-muted-foreground">
                 Customize AI personality to match your brand perfectly
               </p>
@@ -348,7 +348,7 @@ const EcommerceCharles = () => {
       <section id="pricing" className="py-20 bg-gradient-subtle">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Badge className="mb-6 bg-primary/10 text-primary">Get Started</Badge>
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+          <h2 className="text-4xl md:text-6xl font-semibold tracking-[-0.02em] mb-6">
             Ready to transform your <span className="gradient-text-hero">customer conversations</span>?
           </h2>
           <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
@@ -398,7 +398,7 @@ const EcommerceCharles = () => {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-4xl md:text-5xl font-semibold tracking-[-0.02em] mb-4">
               Frequently Asked <span className="gradient-text-accent">Questions</span>
             </h2>
           </div>
@@ -464,7 +464,7 @@ const EcommerceCharles = () => {
       {/* Final CTA */}
       <section className="py-20 bg-gradient-hero text-white relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-semibold tracking-[-0.02em] mb-6">
             Ready to transform customer conversations?
           </h2>
           <p className="text-xl text-white/90 mb-8">

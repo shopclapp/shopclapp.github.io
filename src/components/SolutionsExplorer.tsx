@@ -124,7 +124,7 @@ const SolutionsExplorer = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <Badge className="mb-4 bg-primary/10 text-primary">Solutions</Badge>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-semibold tracking-[-0.02em] mb-4">
             Powered by <span className="gradient-text-hero">AI Agents</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -153,7 +153,7 @@ const SolutionsExplorer = () => {
 
         {/* Stage Info */}
         <div className="text-center mb-12">
-          <h3 className="text-3xl font-bold mb-2">{stageInfo[activeStage].subtitle}</h3>
+          <h3 className="text-3xl font-medium tracking-[-0.01em] mb-2">{stageInfo[activeStage].subtitle}</h3>
           <p className="text-lg text-muted-foreground">{stageInfo[activeStage].description}</p>
         </div>
 
@@ -172,7 +172,7 @@ const SolutionsExplorer = () => {
               <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
                 {solution.icon}
               </div>
-              <h4 className="font-bold text-lg mb-2">{solution.title}</h4>
+              <h4 className="font-medium tracking-[-0.01em] text-lg mb-2">{solution.title}</h4>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {solution.description}
               </p>

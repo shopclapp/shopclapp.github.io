@@ -82,7 +82,7 @@ const TestimonialCarousel = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-semibold tracking-[-0.02em] mb-4">
             Voice of <span className="gradient-text-primary">Our Customers</span>
           </h2>
           <p className="text-xl text-muted-foreground">
@@ -104,7 +104,7 @@ const TestimonialCarousel = () => {
                   <div className="flex items-center gap-4">
                     <div className="text-5xl">{current.logo}</div>
                     <div>
-                      <div className="font-bold text-lg">{current.author}</div>
+                      <div className="font-semibold tracking-[-0.01em] text-lg">{current.author}</div>
                       <div className="text-sm text-muted-foreground">
                         {current.role}, {current.company}
                       </div>
@@ -115,7 +115,7 @@ const TestimonialCarousel = () => {
                 {/* Right: Metric */}
                 <div className="md:col-span-1">
                   <div className="glass-card p-8 text-center">
-                    <div className="text-5xl md:text-6xl font-bold gradient-text-hero mb-2">
+                    <div className="text-5xl md:text-6xl font-semibold tracking-[-0.02em] gradient-text-hero mb-2">
                       {current.metricValue}
                     </div>
                     <div className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
@@ -163,19 +163,19 @@ const TestimonialCarousel = () => {
         {/* Bottom Stats */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-primary mb-1">10M+</div>
+            <div className="text-3xl md:text-4xl font-semibold tracking-[-0.01em] text-primary mb-1">10M+</div>
             <div className="text-sm text-muted-foreground">Conversations</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-primary mb-1">85%</div>
+            <div className="text-3xl md:text-4xl font-semibold tracking-[-0.01em] text-primary mb-1">85%</div>
             <div className="text-sm text-muted-foreground">Automation Rate</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-primary mb-1">10x</div>
+            <div className="text-3xl md:text-4xl font-semibold tracking-[-0.01em] text-primary mb-1">10x</div>
             <div className="text-sm text-muted-foreground">ROI</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-primary mb-1">100+</div>
+            <div className="text-3xl md:text-4xl font-semibold tracking-[-0.01em] text-primary mb-1">100+</div>
             <div className="text-sm text-muted-foreground">Happy Brands</div>
           </div>
         </div>
