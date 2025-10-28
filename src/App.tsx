@@ -9,6 +9,9 @@ import DataSecurity from "./pages/DataSecurity";
 import Support from "./pages/Support";
 import Partners from "./pages/Partners";
 import ShopifyIntegration from "./pages/ShopifyIntegration";
+import ColorPreview from "./pages/ColorPreview";
+import EcommerceLanding from "./pages/EcommerceLanding";
+import EcommerceCharles from "./pages/EcommerceCharles";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,11 +24,14 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/ecommerce" element={<EcommerceLanding />} />
+          <Route path="/charles" element={<EcommerceCharles />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/data-security" element={<DataSecurity />} />
           <Route path="/support" element={<Support />} />
           <Route path="/partners" element={<Partners />} />
           <Route path="/shopify-integration" element={<ShopifyIntegration />} />
+          <Route path="/color-preview" element={<ColorPreview />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
