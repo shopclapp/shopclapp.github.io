@@ -1,80 +1,83 @@
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Karla:wght@300;400;500;600;700;800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    /* Base colors - Cool, modern neutrals with blue tint */
-    --background: 220 20% 98%;
-    --foreground: 240 15% 12%;
+    /* Base colors - Premium light blue-gray (Stripe style) */
+    --background: 220 20% 97%;
+    --foreground: 220 30% 12%;
 
-    /* Card colors - Pure white with depth */
+    /* Card colors - Pure white cards on light gray */
     --card: 0 0% 100%;
-    --card-foreground: 240 15% 12%;
+    --card-foreground: 220 30% 12%;
 
     /* Popover colors */
     --popover: 0 0% 100%;
-    --popover-foreground: 240 15% 12%;
+    --popover-foreground: 220 30% 12%;
 
-    /* Primary - Vibrant Electric Blue (modern, energetic) */
-    --primary: 217 91% 60%;
+    /* Primary - Deep Navy (premium, trustworthy) */
+    --primary: 220 40% 25%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 217 100% 65%;
+    --primary-glow: 220 45% 30%;
 
-    /* Secondary - Deep Royal Purple (premium, sophisticated) */
-    --secondary: 262 83% 58%;
-    --secondary-foreground: 0 0% 100%;
+    /* Secondary - Gold (luxury, attention) */
+    --secondary: 40 95% 55%;
+    --secondary-foreground: 220 30% 12%;
 
-    /* Muted - Cool slate backgrounds */
-    --muted: 220 15% 95%;
-    --muted-foreground: 240 5% 45%;
+    /* Muted - Light blue-gray backgrounds */
+    --muted: 220 20% 95%;
+    --muted-foreground: 220 10% 45%;
 
-    /* Accent - Bright Purple (eye-catching, premium) */
-    --accent: 280 87% 65%;
+    /* Accent - Light Blue (secondary actions) */
+    --accent: 215 60% 60%;
     --accent-foreground: 0 0% 100%;
 
-    /* Highlight - Cyan Blue (stats, CTAs, highlights) */
-    --highlight: 199 89% 48%;
-    --highlight-foreground: 0 0% 100%;
+    /* Highlight - Gold (premium CTAs) */
+    --highlight: 40 95% 55%;
+    --highlight-foreground: 220 30% 12%;
 
     /* Destructive */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    /* Border and inputs - Subtle, modern */
+    /* Border and inputs - Subtle borders */
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 217 91% 60%;
+    --ring: 220 40% 25%;
 
-    /* Chart colors - Blue & Purple spectrum */
-    --chart-1: 217 91% 60%;
-    --chart-2: 262 83% 58%;
-    --chart-3: 280 87% 65%;
-    --chart-4: 199 89% 48%;
-    --chart-5: 245 75% 65%;
+    /* Chart colors - Navy/Blue/Gold spectrum */
+    --chart-1: 220 40% 25%;
+    --chart-2: 215 60% 60%;
+    --chart-3: 40 95% 55%;
+    --chart-4: 210 50% 50%;
+    --chart-5: 45 90% 60%;
 
     /* Border radius - Modern, not too rounded */
     --radius: 0.75rem;
 
-    /* Custom design tokens - Blue & Purple gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(262 83% 58%));
-    --gradient-accent: linear-gradient(135deg, hsl(262 83% 58%), hsl(280 87% 65%));
-    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(262 83% 58%) 50%, hsl(280 87% 65%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(220 15% 95%));
-    --gradient-warm: linear-gradient(135deg, hsl(199 89% 48%), hsl(217 91% 60%));
-    --gradient-cool: linear-gradient(135deg, hsl(245 75% 65%), hsl(262 83% 58%));
+    /* Custom design tokens - Navy/Blue/Gold gradients (Premium style) */
+    --gradient-primary: linear-gradient(135deg, hsl(220 40% 25%), hsl(215 60% 60%));
+    --gradient-accent: linear-gradient(135deg, hsl(40 95% 55%), hsl(45 90% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 40% 25%) 0%, hsl(215 60% 60%) 50%, hsl(210 50% 50%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(220 20% 97%), hsl(0 0% 100%));
+    --gradient-warm: linear-gradient(135deg, hsl(40 95% 55%), hsl(45 90% 60%));
+    --gradient-cool: linear-gradient(135deg, hsl(215 60% 60%), hsl(210 50% 50%));
 
-    /* Shadows - Layered, modern depth with blue tint */
-    --shadow-sm: 0 2px 8px -2px hsl(217 91% 60% / 0.08);
-    --shadow-md: 0 4px 16px -4px hsl(217 91% 60% / 0.12);
-    --shadow-lg: 0 12px 32px -8px hsl(217 91% 60% / 0.15);
-    --shadow-xl: 0 20px 40px -12px hsl(217 91% 60% / 0.18);
-    --shadow-glow-blue: 0 8px 32px hsl(217 91% 60% / 0.35);
-    --shadow-glow-purple: 0 8px 32px hsl(262 83% 58% / 0.35);
-    --shadow-glow-violet: 0 8px 32px hsl(280 87% 65% / 0.35);
-    --shadow-glow-cyan: 0 8px 32px hsl(199 89% 48% / 0.35);
+    /* Gold accent */
+    --gold: 40 95% 55%;
+
+    /* Shadows - Layered, premium depth with navy tint */
+    --shadow-sm: 0 2px 8px -2px hsl(220 40% 25% / 0.08);
+    --shadow-md: 0 4px 16px -4px hsl(220 40% 25% / 0.12);
+    --shadow-lg: 0 12px 32px -8px hsl(220 40% 25% / 0.15);
+    --shadow-xl: 0 20px 40px -12px hsl(220 40% 25% / 0.18);
+    --shadow-glow-blue: 0 8px 32px hsl(220 40% 25% / 0.25);
+    --shadow-glow-purple: 0 8px 32px hsl(215 60% 60% / 0.25);
+    --shadow-glow-violet: 0 8px 32px hsl(210 50% 50% / 0.25);
+    --shadow-glow-cyan: 0 8px 32px hsl(40 95% 55% / 0.25);
 
     /* Transitions - Smooth, premium feel */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -119,6 +122,37 @@
   body {
     @apply bg-background text-foreground;
     font-family: "Inter", sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2 {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  h3 {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+  }
+
+  h4, h5, h6 {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+
+  strong, b {
+    font-weight: 600;
   }
 }
 
@@ -233,41 +267,35 @@
     box-shadow: var(--shadow-glow-cyan);
   }
 
-  /* Glass morphism effect - Charles-inspired */
+  /* Solid cards - No glassmorphism (Exact Charles style) */
   .glass {
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(12px) saturate(180%);
-    -webkit-backdrop-filter: blur(12px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
   }
 
   .glass-dark {
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(12px) saturate(180%);
-    -webkit-backdrop-filter: blur(12px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
   }
 
   .glass-card {
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .glass-card:hover {
-    background: rgba(255, 255, 255, 0.75);
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.12);
     transform: translateY(-4px);
-    box-shadow: 0 12px 40px -8px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.10);
   }
 
   .glass-nav {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    background: #ffffff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   }
 
   /* Premium button styles */

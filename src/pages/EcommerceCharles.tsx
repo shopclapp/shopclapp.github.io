@@ -69,9 +69,10 @@ const EcommerceCharles = () => {
             <div className="hidden md:flex items-center space-x-8">
               <a href="#solutions" className="text-muted-foreground hover:text-primary transition-colors font-medium">Solutions</a>
               <a href="#customers" className="text-muted-foreground hover:text-primary transition-colors font-medium">Customers</a>
-              <a href="#pricing" className="text-muted-foreground hover:text-primary transition-colors font-medium">Pricing</a>
-              <Button className="btn-primary-glow rounded-2xl">
-                Talk to us
+              <Button className="btn-primary-glow rounded-2xl" asChild>
+                <a href="https://wa.me/14707342241?text=Hi%2C%20I%20want%20to%20discuss%20Conversational%20AI%20%26%20CRM%20for%20my%20D2C%20brand" target="_blank" rel="noopener noreferrer">
+                  Talk to us
+                </a>
               </Button>
             </div>
           </div>
@@ -81,9 +82,10 @@ const EcommerceCharles = () => {
               <div className="flex flex-col space-y-4">
                 <a href="#solutions" className="text-muted-foreground hover:text-primary transition-colors px-4 py-2" onClick={() => setMobileMenuOpen(false)}>Solutions</a>
                 <a href="#customers" className="text-muted-foreground hover:text-primary transition-colors px-4 py-2" onClick={() => setMobileMenuOpen(false)}>Customers</a>
-                <a href="#pricing" className="text-muted-foreground hover:text-primary transition-colors px-4 py-2" onClick={() => setMobileMenuOpen(false)}>Pricing</a>
-                <Button className="btn-primary-glow mx-4 rounded-2xl" onClick={() => setMobileMenuOpen(false)}>
-                  Talk to us
+                <Button className="btn-primary-glow mx-4 rounded-2xl" asChild onClick={() => setMobileMenuOpen(false)}>
+                  <a href="https://wa.me/14707342241?text=Hi%2C%20I%20want%20to%20discuss%20Conversational%20AI%20%26%20CRM%20for%20my%20D2C%20brand" target="_blank" rel="noopener noreferrer">
+                    Talk to us
+                  </a>
                 </Button>
               </div>
             </div>
@@ -99,7 +101,7 @@ const EcommerceCharles = () => {
             <div className="space-y-8">
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
                 Engage and convert via{" "}
-                <span className="gradient-text-hero">Conversational AI agents</span>
+                <span className="gradient-text-hero">Conversational AI agents and CRM</span>
               </h1>
 
               <p className="text-xl text-muted-foreground leading-relaxed">
@@ -112,12 +114,11 @@ const EcommerceCharles = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="btn-primary-glow text-lg px-8 py-6 rounded-2xl">
-                  Talk to us
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-                <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-2 rounded-2xl">
-                  See our product
+                <Button size="lg" className="btn-primary-glow text-lg px-8 py-6 rounded-2xl" asChild>
+                  <a href="https://wa.me/14707342241?text=Hi%2C%20I%20want%20to%20discuss%20Conversational%20AI%20%26%20CRM%20for%20my%20D2C%20brand" target="_blank" rel="noopener noreferrer">
+                    Talk to us
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </a>
                 </Button>
               </div>
             </div>
@@ -184,7 +185,7 @@ const EcommerceCharles = () => {
       <section className="py-12 border-y border-border bg-white/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-sm text-muted-foreground mb-6">
-            Trusted by 100+ D2C brands
+            Scaling D2C brand from 10 to 100X | Invite Only
           </p>
           <div className="flex flex-wrap justify-center items-center gap-8">
             {customerLogos.map((logo, idx) => (
@@ -379,9 +380,11 @@ const EcommerceCharles = () => {
               </div>
             </div>
 
-            <Button size="lg" className="btn-primary-glow text-xl px-12 py-8 rounded-2xl">
-              Talk to us
-              <ArrowRight className="ml-3 w-6 h-6" />
+            <Button size="lg" className="btn-primary-glow text-xl px-12 py-8 rounded-2xl" asChild>
+              <a href="https://wa.me/14707342241?text=Hi%2C%20I%20want%20to%20discuss%20Conversational%20AI%20%26%20CRM%20for%20my%20D2C%20brand" target="_blank" rel="noopener noreferrer">
+                Talk to us
+                <ArrowRight className="ml-3 w-6 h-6" />
+              </a>
             </Button>
           </div>
 
@@ -468,12 +471,11 @@ const EcommerceCharles = () => {
             Join 100+ D2C brands using AI agents to multiply revenue. Start with WhatsApp, scale across all channels.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 rounded-2xl">
-              Talk to us
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 text-lg px-8 py-6 rounded-2xl">
-              See our product
+            <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 rounded-2xl" asChild>
+              <a href="https://wa.me/14707342241?text=Hi%2C%20I%20want%20to%20discuss%20Conversational%20AI%20%26%20CRM%20for%20my%20D2C%20brand" target="_blank" rel="noopener noreferrer">
+                Talk to us
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
             </Button>
           </div>
           <p className="mt-6 text-white/80 text-sm">
@@ -530,8 +532,18 @@ const EcommerceCharles = () => {
               </ul>
             </div>
           </div>
-          <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
-            <p>&copy; 2025 Clapp. Conversational AI for commerce.</p>
+          <div className="border-t border-border mt-8 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+              <p className="text-sm text-muted-foreground">&copy; 2025 Clapp. Conversational AI & CRM for commerce.</p>
+              <div className="flex items-center gap-6">
+                <Badge variant="outline" className="text-xs py-1">
+                  Meta Business Partner
+                </Badge>
+                <Badge variant="outline" className="text-xs py-1">
+                  WhatsApp Business API Provider
+                </Badge>
+              </div>
+            </div>
           </div>
         </div>
       </footer>
