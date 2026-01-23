@@ -4,6 +4,15 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+// New Clapp pages
+import ClappLanding from "./pages/ClappLanding";
+import Blogs from "./pages/Blogs";
+import Features from "./pages/Features";
+import UseCases from "./pages/UseCases";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
+import Security from "./pages/Security";
+// Legacy pages (kept for backwards compatibility)
 import Index from "./pages/Index";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import DataSecurity from "./pages/DataSecurity";
@@ -30,7 +39,16 @@ const App = () => {
         <Sonner />
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Index />} />
+            {/* New Clapp routes */}
+            <Route path="/" element={<ClappLanding />} />
+            <Route path="/blogs" element={<Blogs />} />
+            <Route path="/features" element={<Features />} />
+            <Route path="/use-cases" element={<UseCases />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/security" element={<Security />} />
+            {/* Legacy routes (kept for backwards compatibility) */}
+            <Route path="/index" element={<Index />} />
             <Route path="/ecommerce" element={<EcommerceLanding />} />
             <Route path="/ai" element={<AIAgentPlatform />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
