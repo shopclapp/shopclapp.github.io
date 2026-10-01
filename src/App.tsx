@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 // New Clapp pages
 import ClappLanding from "./pages/ClappLanding";
 import Blogs from "./pages/Blogs";
@@ -14,7 +14,6 @@ import Terms from "./pages/Terms";
 import Security from "./pages/Security";
 // Legacy pages (kept for backwards compatibility)
 import Index from "./pages/Index";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
 import DataSecurity from "./pages/DataSecurity";
 import Support from "./pages/Support";
 import Partners from "./pages/Partners";
@@ -44,14 +43,17 @@ const App = () => {
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/features" element={<Features />} />
             <Route path="/use-cases" element={<UseCases />} />
-            <Route path="/privacy" element={<Privacy />} />
+            {/* /privacy-policy is the canonical privacy policy URL - it is the
+                address registered with Meta for app review and data deletion.
+                /privacy is kept as a redirect so existing links keep working. */}
+            <Route path="/privacy-policy" element={<Privacy />} />
+            <Route path="/privacy" element={<Navigate to="/privacy-policy" replace />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/security" element={<Security />} />
             {/* Legacy routes (kept for backwards compatibility) */}
             <Route path="/index" element={<Index />} />
             <Route path="/ecommerce" element={<EcommerceLanding />} />
             <Route path="/ai" element={<AIAgentPlatform />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/data-security" element={<DataSecurity />} />
             <Route path="/support" element={<Support />} />
             <Route path="/partners" element={<Partners />} />

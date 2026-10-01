@@ -1030,7 +1030,7 @@ const EcommerceLanding = () => {
                 <li><a href="#" className="hover:text-primary transition-colors">About</a></li>
                 <li><a href="#" className="hover:text-primary transition-colors">Blog</a></li>
                 <li><a href="#" className="hover:text-primary transition-colors">Contact</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Privacy Policy</a></li>
+                <li><a href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</a></li>
               </ul>
             </div>
           </div>
