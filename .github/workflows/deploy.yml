@@ -44,6 +44,10 @@ jobs:
           path: ./dist
 
   deploy:
+    # The github-pages environment only permits deployments from main, so this
+    # job is rejected outright on pull_request runs. Gate it to pushes on main
+    # and let PRs report on the build job alone.
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
