@@ -14,10 +14,18 @@
  *                               The HTTP status is still 404, which is fine for
  *                               humans but not for strict crawlers.
  *
- *   2. dist/<route>/index.html - a copy for each route below, with its og:url,
- *                               canonical, title and description rewritten to
- *                               describe that page. Pages serves these with a
- *                               real 200.
+ *   2. dist/<route>.html      - a flat file per route. GitHub Pages serves this
+ *                               at /<route> with a direct 200.
+ *
+ *   3. dist/<route>/index.html - the same content at /<route>/.
+ *
+ * Both forms of (2) and (3) are emitted on purpose. If only the directory form
+ * exists, Pages answers /<route> with a 301 to /<route>/ - so the URL handed to
+ * an external reviewer redirects, and the og:url baked into the page (no
+ * trailing slash) disagrees with the address it was finally served from. Meta's
+ * debugger reports that as a redirect plus a canonical mismatch. Shipping the
+ * flat file makes /<route> a direct 200 and keeps og:url truthful, while the
+ * directory form keeps /<route>/ working for anyone who types it.
  *
  * Why the rewrite matters: crawlers read og:url as the canonical address. If
  * every page ships og:url="https://clapp.in", then debugging
@@ -106,8 +114,13 @@ for (const { route, title, description, canonical } of PRERENDER_ROUTES) {
   html = setMeta(html, "name", "twitter:title", title);
   html = setMeta(html, "name", "twitter:description", description);
 
+  // Flat file: Pages serves this at /<route> with a direct 200, no redirect.
+  writeFileSync(join(dist, `${route}.html`), html);
+
+  // Directory form: keeps /<route>/ working for anyone who types the slash.
   const dir = join(dist, route);
   mkdirSync(dir, { recursive: true });
   writeFileSync(join(dir, "index.html"), html);
-  console.log(`postbuild: wrote dist/${route}/index.html (og:url ${url})`);
+
+  console.log(`postbuild: wrote dist/${route}.html + dist/${route}/index.html (og:url ${url})`);
 }
