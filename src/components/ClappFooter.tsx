@@ -136,7 +136,7 @@ const ClappFooter = ({ onOpenModal }: ClappFooterProps) => {
                 <FooterLink href="/security">Security</FooterLink>
               </li>
               <li>
-                <FooterLink href="/privacy">Privacy</FooterLink>
+                <FooterLink href="/privacy-policy">Privacy</FooterLink>
               </li>
               <li>
                 <FooterLink href="/terms">Terms</FooterLink>

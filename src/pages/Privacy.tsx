@@ -16,7 +16,7 @@ const Privacy = () => {
         </p>
 
         <p className="text-white/70 mb-8">
-          <strong className="text-white">Last Updated:</strong> January 2026
+          <strong className="text-white">Last Updated:</strong> October 2026
         </p>
 
         <section className="mb-16">
@@ -116,6 +116,59 @@ const Privacy = () => {
 
         <section className="mb-16">
           <h2 className="text-[28px] mt-16 mb-5 text-emerald-500">
+            Meta Platform Data
+          </h2>
+          <p className="text-white/70 mb-4">
+            Our Atlas product connects to Meta (Facebook and Instagram) business
+            accounts through Meta&apos;s official APIs. When you authorise that
+            connection we access:
+          </p>
+          <ul className="mb-6 pl-6 space-y-3">
+            <li className="text-white/70">
+              Ad account identifiers and the business assets you grant access to
+            </li>
+            <li className="text-white/70">
+              Campaign, ad set, and ad performance metrics (spend, reach,
+              conversions)
+            </li>
+            <li className="text-white/70">
+              Page and catalogue metadata needed to interpret those metrics
+            </li>
+            <li className="text-white/70">
+              OAuth access tokens, stored encrypted and used only to make API
+              requests on your behalf
+            </li>
+          </ul>
+          <p className="text-white/70 mb-4">
+            This data is used solely to generate the recommendations and reporting
+            you have asked Atlas to produce. Specifically, we do{" "}
+            <strong className="text-white">not</strong>:
+          </p>
+          <ul className="mb-6 pl-6 space-y-3">
+            <li className="text-white/70">Sell or rent Meta platform data</li>
+            <li className="text-white/70">
+              Share it with data brokers or advertising networks
+            </li>
+            <li className="text-white/70">
+              Use it to build profiles unrelated to your own ad accounts
+            </li>
+            <li className="text-white/70">
+              Make autonomous changes to your ad accounts - Atlas operates with
+              read-only access by default and every action requires human approval
+            </li>
+          </ul>
+          <p className="text-white/70">
+            Our handling of this data follows the Meta Platform Terms and
+            Developer Policies. You can revoke access at any time from{" "}
+            <strong className="text-white">
+              Facebook Settings &rarr; Apps and Websites
+            </strong>
+            , which immediately stops all further data collection.
+          </p>
+        </section>
+
+        <section className="mb-16">
+          <h2 className="text-[28px] mt-16 mb-5 text-emerald-500">
             Data Retention
           </h2>
           <ul className="mb-6 pl-6 space-y-3">
@@ -159,6 +212,73 @@ const Privacy = () => {
               marketing emails
             </li>
           </ul>
+        </section>
+
+        <section className="mb-16" id="data-deletion">
+          <h2 className="text-[28px] mt-16 mb-5 text-emerald-500">
+            Data Deletion Instructions
+          </h2>
+          <p className="text-white/70 mb-4">
+            You can request deletion of your account and all associated data at any
+            time. There are two ways to do it:
+          </p>
+          <ol className="mb-6 pl-6 space-y-3 list-decimal">
+            <li className="text-white/70">
+              <strong className="text-white">Email us.</strong> Send a deletion
+              request from your registered email address to{" "}
+              <a
+                href="mailto:info@clapp.in?subject=Data%20Deletion%20Request"
+                className="text-emerald-500 no-underline"
+              >
+                info@clapp.in
+              </a>{" "}
+              with the subject line &ldquo;Data Deletion Request&rdquo;. We confirm
+              receipt within 2 business days.
+            </li>
+            <li className="text-white/70">
+              <strong className="text-white">From your account.</strong> Open
+              Settings &rarr; Account &rarr; Delete Account and confirm. This
+              schedules the same deletion automatically.
+            </li>
+          </ol>
+          <p className="text-white/70 mb-4">
+            <strong className="text-white">
+              If you connected a Meta (Facebook or Instagram) account:
+            </strong>{" "}
+            revoking access from{" "}
+            <strong className="text-white">
+              Facebook Settings &rarr; Apps and Websites &rarr; Clapp
+            </strong>{" "}
+            stops all further data collection immediately. To also erase the data
+            we already hold, send a deletion request using either method above.
+          </p>
+          <p className="text-white/70 mb-4">What happens next:</p>
+          <ul className="mb-6 pl-6 space-y-3">
+            <li className="text-white/70">
+              Your account is deactivated and access tokens are revoked immediately
+            </li>
+            <li className="text-white/70">
+              Personal data, Meta platform data, and OAuth tokens are permanently
+              deleted within 30 days
+            </li>
+            <li className="text-white/70">
+              Encrypted backups are purged on their 90-day rotation cycle
+            </li>
+            <li className="text-white/70">
+              We retain only records we are legally required to keep, such as
+              invoices for tax purposes
+            </li>
+            <li className="text-white/70">
+              You receive written confirmation once deletion is complete
+            </li>
+          </ul>
+          <p className="text-white/70">
+            Questions about a deletion request? Contact{" "}
+            <a href="mailto:dpo@clapp.in" className="text-emerald-500 no-underline">
+              dpo@clapp.in
+            </a>
+            .
+          </p>
         </section>
 
         <section className="mb-16">
